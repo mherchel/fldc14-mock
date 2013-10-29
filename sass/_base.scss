@@ -1,21 +1,77 @@
-// @import 'compass/support';
-// @import 'compass/utilities/sprites';
-@import 'compass/css3';
+@import "global";
+
+
+/* =============================================================================
+    Base
+   ========================================================================== */
+
+
+%clearfix {
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+
+body {
+  font-family: helvetica, arial;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  font-family: $heading;
+  text-transform: uppercase;
+  color: $blue;
+  line-height: 1.2;
+  a {
+    text-decoration: none;
+  }
+}
+
+
+h1 {
+  font-size: 45px;
+  margin: 10px 0;
+  line-height: 1.2;
+  @include breakpoint($normal) {
+    font-size: 55px;
+  }
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-family: 'arial narrow', arial, helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
+
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
 
 
 
-// Colors
-
-$yellow: #E4D400;
-$orange: #FCB040;
-$turquois: #55C2C2;
-$blue: #0E73AF;
-
-
-// Breakpoints min-width values
-
-$wide: 1700px;
-$normal: 1200px;
-$tablet_wide: 900px;
-$tablet_narrow: 700px;
-$smartphone_wide: 470px;

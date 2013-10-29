@@ -1,0 +1,22 @@
+// @import 'compass/support';
+// @import 'compass/utilities/sprites';
+@import "breakpoint";
+@import 'compass/css3';
+
+
+
+// Colors
+
+$yellow: #E4D400;
+$orange: #FCB040;
+$turquois: #55C2C2;
+$blue: #0E73AF;
+
+
+// Breakpoints min-width values
+
+$wide: 1700px;
+$normal: 1200px;
+$tablet_wide: 900px;
+$tablet_narrow: 700px;
+$smartphone_wide: 470px;

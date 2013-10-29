@@ -1,0 +1,36 @@
+@import "global";
+
+/* =============================================================================
+    Layout
+   ========================================================================== */
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+  @extend %clearfix;
+  text-align: center;
+  @include breakpoint($normal) {
+    width: 100%;
+    max-width: 1100px;
+  }
+  @include breakpoint($wide) {
+    max-width: 1500px;
+  }
+}
+
+.not-front .content {
+  text-align: left;
+  @include breakpoint($tablet_wide) {
+    float: left;
+    width: 67%;
+    padding-right: 40px;
+  }
+}
+
+#sidebar-first {
+  text-align: left;
+  @include breakpoint($tablet_wide) {
+    float: right;
+    width: 33%;
+  }  
+}

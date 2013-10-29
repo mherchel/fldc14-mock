@@ -1,3 +1,6 @@
+/* =============================================================================
+    Fonts
+   ========================================================================== */
 @font-face {
   font-family: 'bebas_neueregular';
   src: url("../font/BebasNeue-webfont.eot");
@@ -14,6 +17,10 @@
   font-style: normal;
 }
 
+/* =============================================================================
+    Animations
+   ========================================================================== */
+/* Logo Animation */
 /* No Prefix */
 @keyframes bubblerise1 {
   0% {
@@ -429,6 +436,7 @@ h1, h2 {
   font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
   text-transform: uppercase;
   color: #0e73af;
+  line-height: 1.2;
 }
 h1 a, h2 a {
   text-decoration: none;
@@ -443,6 +451,10 @@ h1 {
   h1 {
     font-size: 55px;
   }
+}
+
+h2 {
+  font-size: 36px;
 }
 
 h3 {
@@ -461,6 +473,9 @@ a {
   text-decoration: none;
 }
 
+/* =============================================================================
+    Forms
+   ========================================================================== */
 button {
   font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
   text-transform: uppercase;
@@ -736,6 +751,7 @@ button:hover {
   }
 }
 #hero h2 {
+  font-size: 24px;
   color: #666;
 }
 @media (min-width: 1700px) {
@@ -838,10 +854,30 @@ button:hover {
     Main
    ========================================================================== */
 #main {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 #main .wrapper {
   text-align: left;
+}
+
+/* =============================================================================
+    Sidebar
+   ========================================================================== */
+#sidebar-first h2 {
+  margin: 0 0 20px 0;
+}
+#sidebar-first article {
+  margin-bottom: 20px;
+}
+#sidebar-first article h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+#sidebar-first article p {
+  margin: 0 0 10px 0;
+}
+#sidebar-first article p:last-child {
+  margin-bottom: 0;
 }
 
 /* =============================================================================
