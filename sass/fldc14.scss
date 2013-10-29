@@ -84,10 +84,14 @@ button {
    ========================================================================== */
 
 .wrapper {
-  max-width: 1100px;
+  width: 95%;
   margin: 0 auto;
   @extend %clearfix;
   text-align: center;
+  @include breakpoint($normal) {
+    width: 100%;
+    max-width: 1100px;
+  }
   @include breakpoint($wide) {
     max-width: 1500px;
   }
@@ -117,26 +121,68 @@ button {
 
   h1 {
     float: left;
-    color: $yellow;
     line-height: 100px;
     margin: 0;
     @include transition(all .1s);
     a {
-      color: $yellow;
+      display: block;
+      text-indent: -9999px;
+      background-image: url(../images/drupal-diver-no-bubble.svg);
+      width: 130px;
+      height: 120px;
+      background-size: contain;   
+      background-repeat: no-repeat;   
+      color: $orange;
+      margin: 5px;
+      position: relative;
       @include transition(all, .2s);
+      @include breakpoint($smartphone_wide) {
+        &:after {
+          content: "#FLDC14";
+          position: absolute;
+          left: 100%;
+          text-indent:0
+        }
+      }
+      @include breakpoint($tablet_narrow) {
+        font-size: 40px;
+        margin: 0;
+        text-indent: 0;
+        background-image: none;
+        width: auto;
+        height: auto;
+        display: inline;
+        &:after {
+          content: "";
+        }
+      }
+      @include breakpoint($tablet_wide) {
+        font-size: 45px;
+      }
       &:hover {
-        color: lighten($yellow, 5%);
+        color: lighten($orange, 10%);
+      }
+      &.scrolldown {
+        width: 90px;
+        height: 80px;
       }
     }
   }
 
   nav {
+    display: none;
     float: right;
     font-family: $heading;
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 28px;
     line-height: 100px;
     @include transition(all .1s);
+    @include breakpoint($tablet_wide) {
+      display: block;
+    }
+    @include breakpoint($normal) {
+      font-size: 35px;
+    }
     ul {
       margin: 0;
       padding: 0;
@@ -165,6 +211,27 @@ button {
   // /#heading
 }
 
+#mobile-menu {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin: 25px;
+  cursor:pointer;
+  background-image: url(../images/mobile-nav.svg);
+  background-size: 30px;  
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include transition(all .2s);
+  @include breakpoint($tablet_wide) {
+    display: none;
+  }
+  &.scrolldown {
+    margin: 5px;
+  }
+}
+
 /* =============================================================================
     Main
    ========================================================================== */
@@ -173,24 +240,46 @@ button {
   margin-top: 100px;
   .content {
     text-align: center;
-    height: 0;
-    padding-bottom: 45%;
+    padding-bottom: 20px;
+    @include breakpoint($normal) {
+      height: 0;
+      padding-bottom: 45%;
+    }
+    @include breakpoint($wide) {
+      padding-bottom: 38%;
+    }    
   }
   h1 {
-    margin-top: 100px;
     line-height: 1;
     font-size: 65px;
+    margin-top: 20px;
     color: $blue;
     -webkit-text-stroke: 1px $blue;
     // background:  -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
+    @include breakpoint($tablet_wide) {
+      margin-top: 100px;
+    }
+    @include breakpoint($wide) {
+      font-size: 70px;
+      margin-top: 200px;
+    }
   }
   h2 {
     color: #666;
+    @include breakpoint($wide) {
+      font-size: 40px;
+    }    
+  }
+  p {
+    @include breakpoint($wide) {
+      font-size: 25px;
+    }      
   }
   button {
-    width: 380px;
+    width: 90%;
+    max-width: 380px;
     height: 90px;
     padding: 0;
     text-transform: uppercase;
@@ -246,12 +335,21 @@ button {
 #logo-container {
   @extend %clearfix;
   position: relative;
-  float: left;
-  width: 50%;
-  margin: 40px 0 40px -100px;
+  display: none;
+  @include breakpoint($tablet_narrow) {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+  @include breakpoint($tablet_wide) {
+    float: left;
+    width: 50%;
+    margin: 40px 0 40px -100px;
+  }
   @include breakpoint($wide) {
     margin-top: 100px;
   }
+
 }
 
 #bubble1,
@@ -311,7 +409,6 @@ button {
    ========================================================================== */
 
 #location {
-  min-height: 600px;
   background-image: url(../images/map-background.jpg);
   background-position: center center;
   &:before {
@@ -328,14 +425,20 @@ button {
 }
 
 #location-info {
-  float: right; 
-  margin: 75px 0 0 0;
+  margin: 50px auto;
   padding: 20px 30px;
-  width: 100%;
-  max-width: 360px;
+  width: 95%;
   @extend %clearfix;
   background-color: $blue;
   color: white;
+  @include breakpoint($smartphone_wide) {
+    width: 80%;
+  }
+  @include breakpoint($tablet_narrow) {
+    max-width: 360px;
+    margin: 75px 0;
+    float: right;
+  }
   h1 {
     color: $yellow;
     margin: 0;
@@ -377,27 +480,38 @@ button {
     list-style: none;
     display: inline-block;
     text-align: center;
+    min-width: 100px;
     img {
       max-width: 90%;
     }
   }
   .sponsor-platinum li {
-    &:first-child:nth-last-child(2n),
-    &:first-child:nth-last-child(2n) ~ li {
-      width: 45%;
-    }
-    &:first-child:nth-last-child(3n),
-    &:first-child:nth-last-child(3n) ~ li {
-      width: 30%;
-    }    
-    &:first-child:nth-last-child(4n),
-    &:first-child:nth-last-child(4n) ~ li {
-      width: 24%;
-    }      
+    width: 80%;
+    @include breakpoint($smartphone_wide) {
+      width: 100%;
+      &:first-child:nth-last-child(2n),
+      &:first-child:nth-last-child(2n) ~ li {
+        width: 45%;
+      }
+      &:first-child:nth-last-child(3n),
+      &:first-child:nth-last-child(3n) ~ li {
+        width: 30%;
+      }    
+      &:first-child:nth-last-child(4n),
+      &:first-child:nth-last-child(4n) ~ li {
+        width: 24%;
+      }   
+    }   
   }
 
   .sponsor-gold li {
-    width: 23%;   
+    width: 40%;
+    @include breakpoint($smartphone_wide) {
+      width: 30%;
+    }
+    @include breakpoint($tablet_narrow) {
+      width: 23%;
+    }  
   }
 
   .sponsor-silver li,
