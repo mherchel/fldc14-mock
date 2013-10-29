@@ -1,0 +1,370 @@
+@font-face { font-family: 'bebas_neueregular'; src: url("../font/BebasNeue-webfont.eot"); src: url("../font/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeue-webfont.woff") format("woff"), url("../font/BebasNeue-webfont.ttf") format("truetype"), url("../font/BebasNeue-webfont.svg#bebas_neueregular") format("svg"); font-weight: normal; font-style: normal; }
+
+/* No Prefix */
+@keyframes bubblerise1 { /* line 37, ../sass/_base.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 38, ../sass/_base.scss */
+  20% { right: 35%; bottom: 160px; width: 56px; }
+  /* line 39, ../sass/_base.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 40, ../sass/_base.scss */
+  60% { right: 25%; bottom: 380px; width: 85px; }
+  /* line 41, ../sass/_base.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 42, ../sass/_base.scss */
+  100% { right: 35%; bottom: 600px; width: 110px; } }
+
+@keyframes bubblerise2 { /* line 46, ../sass/_base.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 47, ../sass/_base.scss */
+  20% { right: 25%; bottom: 160px; width: 56px; }
+  /* line 48, ../sass/_base.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 49, ../sass/_base.scss */
+  60% { right: 35%; bottom: 380px; width: 85px; }
+  /* line 50, ../sass/_base.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 51, ../sass/_base.scss */
+  100% { right: 25%; bottom: 600px; width: 110px; } }
+
+/* Webkit */
+@-webkit-keyframes bubblerise1 { /* line 56, ../sass/_base.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 57, ../sass/_base.scss */
+  20% { right: 35%; bottom: 160px; width: 56px; }
+  /* line 58, ../sass/_base.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 59, ../sass/_base.scss */
+  60% { right: 25%; bottom: 380px; width: 85px; }
+  /* line 60, ../sass/_base.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 61, ../sass/_base.scss */
+  100% { right: 35%; bottom: 600px; width: 110px; } }
+
+@-webkit-keyframes bubblerise2 { /* line 65, ../sass/_base.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 66, ../sass/_base.scss */
+  20% { right: 25%; bottom: 160px; width: 56px; }
+  /* line 67, ../sass/_base.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 68, ../sass/_base.scss */
+  60% { right: 35%; bottom: 380px; width: 85px; }
+  /* line 69, ../sass/_base.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 70, ../sass/_base.scss */
+  100% { right: 25%; bottom: 600px; width: 110px; } }
+
+/* mozilla */
+@-moz-keyframes bubblerise1 { /* line 75, ../sass/_base.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 76, ../sass/_base.scss */
+  20% { right: 35%; bottom: 160px; width: 56px; }
+  /* line 77, ../sass/_base.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 78, ../sass/_base.scss */
+  60% { right: 25%; bottom: 380px; width: 85px; }
+  /* line 79, ../sass/_base.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 80, ../sass/_base.scss */
+  100% { right: 35%; bottom: 600px; width: 110px; } }
+
+@-moz-keyframes bubblerise2 { /* line 85, ../sass/_base.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 86, ../sass/_base.scss */
+  20% { right: 25%; bottom: 160px; width: 56px; }
+  /* line 87, ../sass/_base.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 88, ../sass/_base.scss */
+  60% { right: 35%; bottom: 380px; width: 85px; }
+  /* line 89, ../sass/_base.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 90, ../sass/_base.scss */
+  100% { right: 25%; bottom: 600px; width: 110px; } }
+
+/* line 95, ../sass/_base.scss */
+.cssanimations #bubble1 { opacity: 0.8; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 15s linear 0 infinite; animation: bubblerise1 15s linear 0 infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 109, ../sass/_base.scss */
+.cssanimations #bubble2 { opacity: 0.8; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise2 15s linear -8s infinite; animation: bubblerise2 15s linear -8s infinite; -moz-animation-name: bubblerise2; /* Firefox does not like shorthand */ -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 123, ../sass/_base.scss */
+.cssanimations #bubble3 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 13s linear 2s infinite; animation: bubblerise1 13s linear 2s infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 13s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 137, ../sass/_base.scss */
+.cssanimations #bubble4 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise2 17s linear -14s infinite; animation: bubblerise2 17s linear -14s infinite; -moz-animation-name: bubblerise2; /* Firefox does not like shorthand */ -moz-animation-duration: 17s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 151, ../sass/_base.scss */
+.cssanimations #bubble5 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 17s linear -6s infinite; animation: bubblerise1 17s linear -6s infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 17s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+@-webkit-keyframes bubblewhite { /* line 169, ../sass/_base.scss */
+  0% { left: 70%; bottom: -600px; }
+  /* line 170, ../sass/_base.scss */
+  33% { left: 65%; bottom: -200px; }
+  /* line 171, ../sass/_base.scss */
+  66% { left: 70%; bottom: 200px; }
+  /* line 172, ../sass/_base.scss */
+  100% { left: 75%; bottom: 600px; } }
+
+/* line 175, ../sass/_base.scss */
+.cssanimations #bubble-white { display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblewhite 25s linear 0 infinite; animation: bubblewhite 25s linear 0 infinite; }
+
+/* No Prefix */
+@keyframes bubblerise1 { /* line 8, ../sass/_animations.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 9, ../sass/_animations.scss */
+  20% { right: 35%; bottom: 160px; width: 56px; }
+  /* line 10, ../sass/_animations.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 11, ../sass/_animations.scss */
+  60% { right: 25%; bottom: 380px; width: 85px; }
+  /* line 12, ../sass/_animations.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 13, ../sass/_animations.scss */
+  100% { right: 35%; bottom: 600px; width: 110px; } }
+
+@keyframes bubblerise2 { /* line 17, ../sass/_animations.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 18, ../sass/_animations.scss */
+  20% { right: 25%; bottom: 160px; width: 56px; }
+  /* line 19, ../sass/_animations.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 20, ../sass/_animations.scss */
+  60% { right: 35%; bottom: 380px; width: 85px; }
+  /* line 21, ../sass/_animations.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 22, ../sass/_animations.scss */
+  100% { right: 25%; bottom: 600px; width: 110px; } }
+
+/* Webkit */
+@-webkit-keyframes bubblerise1 { /* line 27, ../sass/_animations.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 28, ../sass/_animations.scss */
+  20% { right: 35%; bottom: 160px; width: 56px; }
+  /* line 29, ../sass/_animations.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 30, ../sass/_animations.scss */
+  60% { right: 25%; bottom: 380px; width: 85px; }
+  /* line 31, ../sass/_animations.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 32, ../sass/_animations.scss */
+  100% { right: 35%; bottom: 600px; width: 110px; } }
+
+@-webkit-keyframes bubblerise2 { /* line 36, ../sass/_animations.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 37, ../sass/_animations.scss */
+  20% { right: 25%; bottom: 160px; width: 56px; }
+  /* line 38, ../sass/_animations.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 39, ../sass/_animations.scss */
+  60% { right: 35%; bottom: 380px; width: 85px; }
+  /* line 40, ../sass/_animations.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 41, ../sass/_animations.scss */
+  100% { right: 25%; bottom: 600px; width: 110px; } }
+
+/* mozilla */
+@-moz-keyframes bubblerise1 { /* line 46, ../sass/_animations.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 47, ../sass/_animations.scss */
+  20% { right: 35%; bottom: 160px; width: 56px; }
+  /* line 48, ../sass/_animations.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 49, ../sass/_animations.scss */
+  60% { right: 25%; bottom: 380px; width: 85px; }
+  /* line 50, ../sass/_animations.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 51, ../sass/_animations.scss */
+  100% { right: 35%; bottom: 600px; width: 110px; } }
+
+@-moz-keyframes bubblerise2 { /* line 56, ../sass/_animations.scss */
+  0% { right: 30%; bottom: 60px; width: 40px; }
+  /* line 57, ../sass/_animations.scss */
+  20% { right: 25%; bottom: 160px; width: 56px; }
+  /* line 58, ../sass/_animations.scss */
+  40% { right: 30%; bottom: 250px; width: 67px; }
+  /* line 59, ../sass/_animations.scss */
+  60% { right: 35%; bottom: 380px; width: 85px; }
+  /* line 60, ../sass/_animations.scss */
+  80% { right: 30%; bottom: 490px; width: 90px; }
+  /* line 61, ../sass/_animations.scss */
+  100% { right: 25%; bottom: 600px; width: 110px; } }
+
+/* line 66, ../sass/_animations.scss */
+.cssanimations #bubble1 { opacity: 0.8; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 15s linear 0 infinite; animation: bubblerise1 15s linear 0 infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 80, ../sass/_animations.scss */
+.cssanimations #bubble2 { opacity: 0.8; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise2 15s linear -8s infinite; animation: bubblerise2 15s linear -8s infinite; -moz-animation-name: bubblerise2; /* Firefox does not like shorthand */ -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 94, ../sass/_animations.scss */
+.cssanimations #bubble3 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 13s linear 2s infinite; animation: bubblerise1 13s linear 2s infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 13s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 108, ../sass/_animations.scss */
+.cssanimations #bubble4 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise2 17s linear -14s infinite; animation: bubblerise2 17s linear -14s infinite; -moz-animation-name: bubblerise2; /* Firefox does not like shorthand */ -moz-animation-duration: 17s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* line 122, ../sass/_animations.scss */
+.cssanimations #bubble5 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 17s linear -6s infinite; animation: bubblerise1 17s linear -6s infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 17s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+@keyframes bubblewhite { /* line 140, ../sass/_animations.scss */
+  0% { left: 70%; bottom: -600px; }
+  /* line 141, ../sass/_animations.scss */
+  33% { left: 65%; bottom: -200px; }
+  /* line 142, ../sass/_animations.scss */
+  66% { left: 70%; bottom: 200px; }
+  /* line 143, ../sass/_animations.scss */
+  100% { left: 75%; bottom: 600px; } }
+
+@-webkit-keyframes bubblewhite { /* line 147, ../sass/_animations.scss */
+  0% { left: 70%; bottom: -600px; }
+  /* line 148, ../sass/_animations.scss */
+  33% { left: 65%; bottom: -200px; }
+  /* line 149, ../sass/_animations.scss */
+  66% { left: 70%; bottom: 200px; }
+  /* line 150, ../sass/_animations.scss */
+  100% { left: 75%; bottom: 600px; } }
+
+@-moz-keyframes bubblewhite { /* line 154, ../sass/_animations.scss */
+  0% { left: 70%; bottom: -600px; }
+  /* line 155, ../sass/_animations.scss */
+  33% { left: 65%; bottom: -200px; }
+  /* line 156, ../sass/_animations.scss */
+  66% { left: 70%; bottom: 200px; }
+  /* line 157, ../sass/_animations.scss */
+  100% { left: 75%; bottom: 600px; } }
+
+/* line 160, ../sass/_animations.scss */
+.cssanimations #bubble-white { display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblewhite 25s linear 0 infinite; animation: bubblewhite 25s linear 0 infinite; -moz-animation-name: bubblewhite; /* Firefox does not like shorthand */ -moz-animation-duration: 25s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+
+/* ============================================================================= Base ========================================================================== */
+/* line 13, ../sass/fldc14.scss */
+.wrapper:after, #heading:after, #logo-container:after, #location-info:after, .wrapper:before, #heading:before, #logo-container:before, #location-info:before { display: table; content: ""; clear: both; }
+
+/* line 20, ../sass/fldc14.scss */
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 25, ../sass/fldc14.scss */
+body { font-family: helvetica, arial; line-height: 1.7; color: #666; margin: 0; }
+
+/* line 32, ../sass/fldc14.scss */
+img { max-width: 100%; height: auto; }
+
+/* line 37, ../sass/fldc14.scss */
+h1, h2 { font-family: "bebas_neueregular", "arial narrow", arial, sans-serif; text-transform: uppercase; color: #333; }
+/* line 41, ../sass/fldc14.scss */
+h1 a, h2 a { text-decoration: none; }
+
+/* line 47, ../sass/fldc14.scss */
+h1 { font-size: 45px; margin: 10px 0; }
+
+/* line 52, ../sass/fldc14.scss */
+h3 { font-family: 'arial narrow', arial, helvetica, sans-serif; font-size: 20px; text-transform: uppercase; color: #333; }
+
+/* line 60, ../sass/fldc14.scss */
+p { font-size: 18px; }
+
+/* line 64, ../sass/fldc14.scss */
+button { font-family: "bebas_neueregular", "arial narrow", arial, sans-serif; text-transform: uppercase; border: 0; font-size: 35px; cursor: pointer; background-color: #fcb040; color: white; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
+/* line 73, ../sass/fldc14.scss */
+button:hover { background-color: #fca627; }
+
+/* ============================================================================= Layout ========================================================================== */
+/* line 84, ../sass/fldc14.scss */
+.wrapper { max-width: 1100px; margin: 0 auto; text-align: center; }
+
+/* ============================================================================= Heading Section ========================================================================== */
+/* line 96, ../sass/fldc14.scss */
+#heading { background-color: black; z-index: 10; position: fixed; top: 0; width: 100%; height: 100px; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; transition: all 0.1s; }
+/* line 105, ../sass/fldc14.scss */
+#heading.scrolldown { height: 60px; }
+/* line 108, ../sass/fldc14.scss */
+#heading.scrolldown h1, #heading.scrolldown nav { line-height: 60px; }
+/* line 113, ../sass/fldc14.scss */
+#heading h1 { float: left; color: #e4d400; line-height: 100px; margin: 0; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; transition: all 0.1s; }
+/* line 119, ../sass/fldc14.scss */
+#heading h1 a { color: #e4d400; -webkit-transition: all, 0.2s; -moz-transition: all, 0.2s; -o-transition: all, 0.2s; transition: all, 0.2s; }
+/* line 122, ../sass/fldc14.scss */
+#heading h1 a:hover { color: #feec00; }
+/* line 128, ../sass/fldc14.scss */
+#heading nav { float: right; font-family: "bebas_neueregular", "arial narrow", arial, sans-serif; text-transform: uppercase; font-size: 35px; line-height: 100px; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; transition: all 0.1s; }
+/* line 135, ../sass/fldc14.scss */
+#heading nav ul { margin: 0; padding: 0; }
+/* line 139, ../sass/fldc14.scss */
+#heading nav li { margin: 0; display: inline-block; }
+/* line 144, ../sass/fldc14.scss */
+#heading nav a { padding: 10px 10px; color: white; text-decoration: none; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
+/* line 149, ../sass/fldc14.scss */
+#heading nav a:hover { color: #e4d400; }
+
+/* ============================================================================= Main ========================================================================== */
+/* line 163, ../sass/fldc14.scss */
+#main { margin-top: 100px; }
+/* line 165, ../sass/fldc14.scss */
+#main .content { text-align: center; }
+/* line 169, ../sass/fldc14.scss */
+#main h1 { margin-top: 120px; line-height: 1; font-size: 65px; color: #0e73af; -webkit-text-stroke: 1px #0e73af; }
+/* line 176, ../sass/fldc14.scss */
+#main h2 { color: #666; }
+/* line 179, ../sass/fldc14.scss */
+#main button { width: 380px; height: 90px; padding: 0; text-transform: uppercase; text-align: center; line-height: 90px; margin-top: 10px; }
+
+/* line 191, ../sass/fldc14.scss */
+#logo-container { position: relative; float: left; width: 50%; margin: 40px 0 40px -100px; }
+
+/* line 203, ../sass/fldc14.scss */
+#bubble1, #bubble2, #bubble3, #bubble4, #bubble5 { display: none; }
+
+/* line 211, ../sass/fldc14.scss */
+.cssanimations #bubble1, .cssanimations #bubble2, .cssanimations #bubble3, .cssanimations #bubble4, .cssanimations #bubble5 { display: block; }
+
+/* ============================================================================= Turqoise ========================================================================== */
+/* line 220, ../sass/fldc14.scss */
+#images { background-color: #00cccc; min-height: 600px; position: relative; overflow: hidden; }
+/* line 225, ../sass/fldc14.scss */
+#images h1 { margin-top: 50px; color: white; }
+/* line 229, ../sass/fldc14.scss */
+#images:before { content: ""; width: 0; height: 0; position: absolute; left: 50%; margin-left: -40px; border-left: 40px solid transparent; border-right: 40px solid transparent; border-top: 40px solid white; }
+
+/* line 243, ../sass/fldc14.scss */
+#bubble-white { position: absolute; bottom: 200px; width: 45%; height: auto; left: 80%; }
+
+/* ============================================================================= Location Map ========================================================================== */
+/* line 255, ../sass/fldc14.scss */
+#location { min-height: 600px; background-image: url(../images/map-background.jpg); background-position: center center; }
+/* line 259, ../sass/fldc14.scss */
+#location:before { content: ""; width: 0; height: 0; position: absolute; left: 50%; margin-left: -40px; border-left: 40px solid transparent; border-right: 40px solid transparent; border-top: 40px solid #00cccc; }
+
+/* line 272, ../sass/fldc14.scss */
+#location-info { float: right; margin: 75px 0 0 0; padding: 20px 30px; width: 360px; background-color: #0e73af; color: white; }
+/* line 280, ../sass/fldc14.scss */
+#location-info h1 { color: #e4d400; margin: 0; }
+/* line 284, ../sass/fldc14.scss */
+#location-info h2 { color: white; margin: 0; text-align: left; font-size: 35px; line-height: 1.5; }
+/* line 291, ../sass/fldc14.scss */
+#location-info h3 { color: white; margin: 0; text-align: left; margin-bottom: 20px; }
+/* line 297, ../sass/fldc14.scss */
+#location-info p { font-size: 16px; color: white; margin: 0; text-align: left; }
+
+/* ============================================================================= Sponsors ========================================================================== */
+/* line 311, ../sass/fldc14.scss */
+#sponsors ul { padding: 0; margin: 0; }
+/* line 315, ../sass/fldc14.scss */
+#sponsors li { margin: 0; padding: 0; list-style: none; display: inline-block; text-align: center; }
+/* line 321, ../sass/fldc14.scss */
+#sponsors li img { max-width: 90%; }
+/* line 327, ../sass/fldc14.scss */
+#sponsors .sponsor-platinum li:first-child:nth-last-child(2n), #sponsors .sponsor-platinum li:first-child:nth-last-child(2n) ~ li { width: 45%; }
+/* line 331, ../sass/fldc14.scss */
+#sponsors .sponsor-platinum li:first-child:nth-last-child(3n), #sponsors .sponsor-platinum li:first-child:nth-last-child(3n) ~ li { width: 30%; }
+/* line 335, ../sass/fldc14.scss */
+#sponsors .sponsor-platinum li:first-child:nth-last-child(4n), #sponsors .sponsor-platinum li:first-child:nth-last-child(4n) ~ li { width: 24%; }
+/* line 340, ../sass/fldc14.scss */
+#sponsors .sponsor-gold li { width: 23%; }
+/* line 345, ../sass/fldc14.scss */
+#sponsors .sponsor-silver li, #sponsors .sponsor-bronze li { width: 12%; }
+/* line 349, ../sass/fldc14.scss */
+#sponsors .sponsor-platinum { color: #666; }
+/* line 352, ../sass/fldc14.scss */
+#sponsors .sponsor-gold { color: #e6c200; }
+/* line 355, ../sass/fldc14.scss */
+#sponsors .sponsor-silver { color: #999; }
+/* line 358, ../sass/fldc14.scss */
+#sponsors .sponsor-bronze { color: #998100; }

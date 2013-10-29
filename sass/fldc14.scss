@@ -1,0 +1,362 @@
+@import "base";
+@import "animations";
+
+
+
+/* =============================================================================
+    Base
+   ========================================================================== */
+
+
+%clearfix {
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+
+body {
+  font-family: helvetica, arial;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  font-family: $heading;
+  text-transform: uppercase;
+  color: #333;
+  a {
+    text-decoration: none;
+  }
+}
+
+
+h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+h3 {
+  font-family: 'arial narrow', arial, helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
+
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  font-family: $heading;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 35px;
+  cursor: pointer;
+  background-color: $orange;
+  color: white;  
+  @include transition(all .2s);
+  &:hover {
+    background-color: darken($orange, 5%);
+  }
+}
+
+
+
+/* =============================================================================
+    Layout
+   ========================================================================== */
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  @extend %clearfix;
+  text-align: center;
+}
+
+
+/* =============================================================================
+    Heading Section
+   ========================================================================== */
+
+#heading {
+  background-color: black;
+  @extend %clearfix;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  @include transition(all .1s);
+  &.scrolldown {
+    height: 60px;
+    // background-color: rgba(0,0,0,0.7);
+    h1, nav {
+      line-height: 60px;
+    }
+  }
+
+  h1 {
+    float: left;
+    color: $yellow;
+    line-height: 100px;
+    margin: 0;
+    @include transition(all .1s);
+    a {
+      color: $yellow;
+      @include transition(all, .2s);
+      &:hover {
+        color: lighten($yellow, 5%);
+      }
+    }
+  }
+
+  nav {
+    float: right;
+    font-family: $heading;
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 100px;
+    @include transition(all .1s);
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin: 0;
+      display: inline-block;
+
+    }
+    a {
+      padding: 10px 10px;
+      color: white;
+      text-decoration: none;
+      @include transition(all .2s);
+      &:hover {
+        color: $yellow;
+      }
+
+    }
+  }
+
+  // /#heading
+}
+
+/* =============================================================================
+    Main
+   ========================================================================== */
+
+#main {
+  margin-top: 100px;
+  .content {
+    text-align: center;
+
+  }
+  h1 {
+    margin-top: 120px;
+    line-height: 1;
+    font-size: 65px;
+    color: $blue;
+    -webkit-text-stroke: 1px $blue;
+  }
+  h2 {
+    color: #666;
+  }
+  button {
+    width: 380px;
+    height: 90px;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;    
+    line-height: 90px;
+    margin-top: 10px;
+  }
+  // /#main
+}
+
+#logo-container {
+  @extend %clearfix;
+  position: relative;
+  float: left;
+  width: 50%;
+  margin: 40px 0 40px -100px;
+}
+
+#bubble1,
+#bubble2,
+#bubble3,
+#bubble4,
+#bubble5 {
+  display: none;
+}
+
+.cssanimations #bubble1,
+.cssanimations #bubble2,
+.cssanimations #bubble3,
+.cssanimations #bubble4,
+.cssanimations #bubble5 {
+  display: block;
+}
+
+/* =============================================================================
+    Turqoise
+   ========================================================================== */
+
+
+#images {
+  background-color: $turquois;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    margin-top: 50px;
+    color: white;
+  }
+  &:before {
+    content: "";
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid white;
+  }
+  // /#images
+}
+
+#bubble-white {
+  position: absolute;
+  bottom: 200px;
+  width: 45%;
+  height: auto;
+  left: 80%;
+}
+
+/* =============================================================================
+    Location Map
+   ========================================================================== */
+
+#location {
+  min-height: 600px;
+  background-image: url(../images/map-background.jpg);
+  background-position: center center;
+  &:before {
+    content: "";
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid $turquois;
+  }
+}
+
+#location-info {
+  float: right; 
+  margin: 75px 0 0 0;
+  padding: 20px 30px;
+  width: 360px;
+  @extend %clearfix;
+  background-color: $blue;
+  color: white;
+  h1 {
+    color: $yellow;
+    margin: 0;
+  }
+  h2 {
+    color: white;
+    margin: 0;
+    text-align: left;
+    font-size: 35px;   
+    line-height: 1.5; 
+  }
+  h3 {
+    color: white;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 20px;
+  }  
+  p {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    text-align: left;    
+  }
+}
+
+
+/* =============================================================================
+    Sponsors
+   ========================================================================== */
+
+#sponsors {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    img {
+      max-width: 90%;
+    }
+  }
+  .sponsor-platinum li {
+    &:first-child:nth-last-child(2n),
+    &:first-child:nth-last-child(2n) ~ li {
+      width: 45%;
+    }
+    &:first-child:nth-last-child(3n),
+    &:first-child:nth-last-child(3n) ~ li {
+      width: 30%;
+    }    
+    &:first-child:nth-last-child(4n),
+    &:first-child:nth-last-child(4n) ~ li {
+      width: 24%;
+    }      
+  }
+
+  .sponsor-gold li {
+    width: 23%;   
+  }
+
+  .sponsor-silver li,
+  .sponsor-bronze li,{
+    width: 12%;    
+  }
+
+  .sponsor-platinum {
+    color: #666;
+  }
+  .sponsor-gold {
+    color: darken(gold, 5%);;
+  }
+  .sponsor-silver {
+    color: #999;
+  }
+  .sponsor-bronze {
+    color: darken(gold, 20%);
+  }
+  // /#Sponsors
+}
