@@ -1,339 +1,1018 @@
-@font-face { font-family: 'bebas_neueregular'; src: url("../font/BebasNeue-webfont.eot"); src: url("../font/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeue-webfont.woff") format("woff"), url("../font/BebasNeue-webfont.ttf") format("truetype"), url("../font/BebasNeue-webfont.svg#bebas_neueregular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url("../font/BebasNeue-webfont.eot");
+  src: url("../font/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeue-webfont.woff") format("woff"), url("../font/BebasNeue-webfont.ttf") format("truetype"), url("../font/BebasNeue-webfont.svg#bebas_neueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-@font-face { font-family: "Social Media Icons"; src: url("../font/social-media-icons.eot"); src: url("../font/social-media-icons.eot?#iefix") format("eot"), url("../font/social-media-icons.woff") format("woff"), url("../font/social-media-icons.ttf") format("truetype"), url("../font/social-media-icons.svg") format("svg"); font-weight: normal; font-style: normal; }
+@font-face {
+  font-family: "Social Media Icons";
+  src: url("../font/social-media-icons.eot");
+  src: url("../font/social-media-icons.eot?#iefix") format("eot"), url("../font/social-media-icons.woff") format("woff"), url("../font/social-media-icons.ttf") format("truetype"), url("../font/social-media-icons.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* No Prefix */
-@keyframes bubblerise1 { /* line 8, ../sass/_animations.scss */
-  0% { right: 30%; bottom: 60px; width: 40px; }
-  /* line 9, ../sass/_animations.scss */
-  20% { right: 35%; bottom: 160px; width: 56px; }
-  /* line 10, ../sass/_animations.scss */
-  40% { right: 30%; bottom: 250px; width: 67px; }
-  /* line 11, ../sass/_animations.scss */
-  60% { right: 25%; bottom: 380px; width: 85px; }
-  /* line 12, ../sass/_animations.scss */
-  80% { right: 30%; bottom: 490px; width: 90px; }
-  /* line 13, ../sass/_animations.scss */
-  100% { right: 35%; bottom: 600px; width: 110px; } }
+@keyframes bubblerise1 {
+  0% {
+    right: 30%;
+    bottom: 60px;
+    width: 40px;
+  }
 
-@keyframes bubblerise2 { /* line 17, ../sass/_animations.scss */
-  0% { right: 30%; bottom: 60px; width: 40px; }
-  /* line 18, ../sass/_animations.scss */
-  20% { right: 25%; bottom: 160px; width: 56px; }
-  /* line 19, ../sass/_animations.scss */
-  40% { right: 30%; bottom: 250px; width: 67px; }
-  /* line 20, ../sass/_animations.scss */
-  60% { right: 35%; bottom: 380px; width: 85px; }
-  /* line 21, ../sass/_animations.scss */
-  80% { right: 30%; bottom: 490px; width: 90px; }
-  /* line 22, ../sass/_animations.scss */
-  100% { right: 25%; bottom: 600px; width: 110px; } }
+  20% {
+    right: 35%;
+    bottom: 160px;
+    width: 56px;
+  }
+
+  40% {
+    right: 30%;
+    bottom: 250px;
+    width: 67px;
+  }
+
+  60% {
+    right: 25%;
+    bottom: 380px;
+    width: 85px;
+  }
+
+  80% {
+    right: 30%;
+    bottom: 490px;
+    width: 90px;
+  }
+
+  100% {
+    right: 35%;
+    bottom: 600px;
+    width: 110px;
+  }
+}
+
+@keyframes bubblerise2 {
+  0% {
+    right: 30%;
+    bottom: 60px;
+    width: 40px;
+  }
+
+  20% {
+    right: 25%;
+    bottom: 160px;
+    width: 56px;
+  }
+
+  40% {
+    right: 30%;
+    bottom: 250px;
+    width: 67px;
+  }
+
+  60% {
+    right: 35%;
+    bottom: 380px;
+    width: 85px;
+  }
+
+  80% {
+    right: 30%;
+    bottom: 490px;
+    width: 90px;
+  }
+
+  100% {
+    right: 25%;
+    bottom: 600px;
+    width: 110px;
+  }
+}
 
 /* Webkit */
-@-webkit-keyframes bubblerise1 { /* line 27, ../sass/_animations.scss */
-  0% { right: 30%; bottom: 60px; width: 40px; }
-  /* line 28, ../sass/_animations.scss */
-  20% { right: 35%; bottom: 160px; width: 56px; }
-  /* line 29, ../sass/_animations.scss */
-  40% { right: 30%; bottom: 250px; width: 67px; }
-  /* line 30, ../sass/_animations.scss */
-  60% { right: 25%; bottom: 380px; width: 85px; }
-  /* line 31, ../sass/_animations.scss */
-  80% { right: 30%; bottom: 490px; width: 90px; }
-  /* line 32, ../sass/_animations.scss */
-  100% { right: 35%; bottom: 600px; width: 110px; } }
+@-webkit-keyframes bubblerise1 {
+  0% {
+    right: 30%;
+    bottom: 60px;
+    width: 40px;
+  }
 
-@-webkit-keyframes bubblerise2 { /* line 36, ../sass/_animations.scss */
-  0% { right: 30%; bottom: 60px; width: 40px; }
-  /* line 37, ../sass/_animations.scss */
-  20% { right: 25%; bottom: 160px; width: 56px; }
-  /* line 38, ../sass/_animations.scss */
-  40% { right: 30%; bottom: 250px; width: 67px; }
-  /* line 39, ../sass/_animations.scss */
-  60% { right: 35%; bottom: 380px; width: 85px; }
-  /* line 40, ../sass/_animations.scss */
-  80% { right: 30%; bottom: 490px; width: 90px; }
-  /* line 41, ../sass/_animations.scss */
-  100% { right: 25%; bottom: 600px; width: 110px; } }
+  20% {
+    right: 35%;
+    bottom: 160px;
+    width: 56px;
+  }
+
+  40% {
+    right: 30%;
+    bottom: 250px;
+    width: 67px;
+  }
+
+  60% {
+    right: 25%;
+    bottom: 380px;
+    width: 85px;
+  }
+
+  80% {
+    right: 30%;
+    bottom: 490px;
+    width: 90px;
+  }
+
+  100% {
+    right: 35%;
+    bottom: 600px;
+    width: 110px;
+  }
+}
+
+@-webkit-keyframes bubblerise2 {
+  0% {
+    right: 30%;
+    bottom: 60px;
+    width: 40px;
+  }
+
+  20% {
+    right: 25%;
+    bottom: 160px;
+    width: 56px;
+  }
+
+  40% {
+    right: 30%;
+    bottom: 250px;
+    width: 67px;
+  }
+
+  60% {
+    right: 35%;
+    bottom: 380px;
+    width: 85px;
+  }
+
+  80% {
+    right: 30%;
+    bottom: 490px;
+    width: 90px;
+  }
+
+  100% {
+    right: 25%;
+    bottom: 600px;
+    width: 110px;
+  }
+}
 
 /* mozilla */
-@-moz-keyframes bubblerise1 { /* line 46, ../sass/_animations.scss */
-  0% { right: 30%; bottom: 60px; width: 40px; }
-  /* line 47, ../sass/_animations.scss */
-  20% { right: 35%; bottom: 160px; width: 56px; }
-  /* line 48, ../sass/_animations.scss */
-  40% { right: 30%; bottom: 250px; width: 67px; }
-  /* line 49, ../sass/_animations.scss */
-  60% { right: 25%; bottom: 380px; width: 85px; }
-  /* line 50, ../sass/_animations.scss */
-  80% { right: 30%; bottom: 490px; width: 90px; }
-  /* line 51, ../sass/_animations.scss */
-  100% { right: 35%; bottom: 600px; width: 110px; } }
+@-moz-keyframes bubblerise1 {
+  0% {
+    right: 30%;
+    bottom: 60px;
+    width: 40px;
+  }
 
-@-moz-keyframes bubblerise2 { /* line 56, ../sass/_animations.scss */
-  0% { right: 30%; bottom: 60px; width: 40px; }
-  /* line 57, ../sass/_animations.scss */
-  20% { right: 25%; bottom: 160px; width: 56px; }
-  /* line 58, ../sass/_animations.scss */
-  40% { right: 30%; bottom: 250px; width: 67px; }
-  /* line 59, ../sass/_animations.scss */
-  60% { right: 35%; bottom: 380px; width: 85px; }
-  /* line 60, ../sass/_animations.scss */
-  80% { right: 30%; bottom: 490px; width: 90px; }
-  /* line 61, ../sass/_animations.scss */
-  100% { right: 25%; bottom: 600px; width: 110px; } }
+  20% {
+    right: 35%;
+    bottom: 160px;
+    width: 56px;
+  }
 
-/* line 66, ../sass/_animations.scss */
-.cssanimations #bubble1 { opacity: 0.8; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 15s linear 0 infinite; animation: bubblerise1 15s linear 0 infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+  40% {
+    right: 30%;
+    bottom: 250px;
+    width: 67px;
+  }
 
-/* line 80, ../sass/_animations.scss */
-.cssanimations #bubble2 { opacity: 0.8; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise2 15s linear -8s infinite; animation: bubblerise2 15s linear -8s infinite; -moz-animation-name: bubblerise2; /* Firefox does not like shorthand */ -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+  60% {
+    right: 25%;
+    bottom: 380px;
+    width: 85px;
+  }
 
-/* line 94, ../sass/_animations.scss */
-.cssanimations #bubble3 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 13s linear 2s infinite; animation: bubblerise1 13s linear 2s infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 13s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+  80% {
+    right: 30%;
+    bottom: 490px;
+    width: 90px;
+  }
 
-/* line 108, ../sass/_animations.scss */
-.cssanimations #bubble4 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise2 17s linear -14s infinite; animation: bubblerise2 17s linear -14s infinite; -moz-animation-name: bubblerise2; /* Firefox does not like shorthand */ -moz-animation-duration: 17s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+  100% {
+    right: 35%;
+    bottom: 600px;
+    width: 110px;
+  }
+}
 
-/* line 122, ../sass/_animations.scss */
-.cssanimations #bubble5 { opacity: 0.5; right: -9999px; display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblerise1 17s linear -6s infinite; animation: bubblerise1 17s linear -6s infinite; -moz-animation-name: bubblerise1; /* Firefox does not like shorthand */ -moz-animation-duration: 17s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+@-moz-keyframes bubblerise2 {
+  0% {
+    right: 30%;
+    bottom: 60px;
+    width: 40px;
+  }
 
-@keyframes bubblewhite { /* line 140, ../sass/_animations.scss */
-  0% { left: 70%; bottom: -600px; }
-  /* line 141, ../sass/_animations.scss */
-  33% { left: 65%; bottom: -200px; }
-  /* line 142, ../sass/_animations.scss */
-  66% { left: 70%; bottom: 200px; }
-  /* line 143, ../sass/_animations.scss */
-  100% { left: 75%; bottom: 600px; } }
+  20% {
+    right: 25%;
+    bottom: 160px;
+    width: 56px;
+  }
 
-@-webkit-keyframes bubblewhite { /* line 147, ../sass/_animations.scss */
-  0% { left: 70%; bottom: -600px; }
-  /* line 148, ../sass/_animations.scss */
-  33% { left: 65%; bottom: -200px; }
-  /* line 149, ../sass/_animations.scss */
-  66% { left: 70%; bottom: 200px; }
-  /* line 150, ../sass/_animations.scss */
-  100% { left: 75%; bottom: 600px; } }
+  40% {
+    right: 30%;
+    bottom: 250px;
+    width: 67px;
+  }
 
-@-moz-keyframes bubblewhite { /* line 154, ../sass/_animations.scss */
-  0% { left: 70%; bottom: -600px; }
-  /* line 155, ../sass/_animations.scss */
-  33% { left: 65%; bottom: -200px; }
-  /* line 156, ../sass/_animations.scss */
-  66% { left: 70%; bottom: 200px; }
-  /* line 157, ../sass/_animations.scss */
-  100% { left: 75%; bottom: 600px; } }
+  60% {
+    right: 35%;
+    bottom: 380px;
+    width: 85px;
+  }
 
-/* line 160, ../sass/_animations.scss */
-.cssanimations #bubble-white { display: block; position: absolute; -webkit-transform: translateZ(0); -webkit-animation: bubblewhite 25s linear 0 infinite; animation: bubblewhite 25s linear 0 infinite; -moz-animation-name: bubblewhite; /* Firefox does not like shorthand */ -moz-animation-duration: 25s; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; }
+  80% {
+    right: 30%;
+    bottom: 490px;
+    width: 90px;
+  }
 
-/* ============================================================================= Base ========================================================================== */
-/* line 14, ../sass/fldc14.scss */
-.wrapper:after, #heading:after, #logo-container:after, #location-info:after, .wrapper:before, #heading:before, #logo-container:before, #location-info:before { display: table; content: ""; clear: both; }
+  100% {
+    right: 25%;
+    bottom: 600px;
+    width: 110px;
+  }
+}
 
-/* line 22, ../sass/fldc14.scss */
-*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cssanimations #bubble1 {
+  opacity: 0.8;
+  display: block;
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: bubblerise1 15s linear 0 infinite;
+  animation: bubblerise1 15s linear 0 infinite;
+  -moz-animation-name: bubblerise1;
+  /* Firefox does not like shorthand */
+  -moz-animation-duration: 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
 
-/* line 27, ../sass/fldc14.scss */
-body { font-family: helvetica, arial; line-height: 1.7; color: #666; margin: 0; }
+.cssanimations #bubble2 {
+  opacity: 0.8;
+  right: -9999px;
+  display: block;
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: bubblerise2 15s linear -8s infinite;
+  animation: bubblerise2 15s linear -8s infinite;
+  -moz-animation-name: bubblerise2;
+  /* Firefox does not like shorthand */
+  -moz-animation-duration: 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
 
-/* line 34, ../sass/fldc14.scss */
-img { max-width: 100%; height: auto; }
+.cssanimations #bubble3 {
+  opacity: 0.5;
+  right: -9999px;
+  display: block;
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: bubblerise1 13s linear 2s infinite;
+  animation: bubblerise1 13s linear 2s infinite;
+  -moz-animation-name: bubblerise1;
+  /* Firefox does not like shorthand */
+  -moz-animation-duration: 13s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
 
-/* line 39, ../sass/fldc14.scss */
-h1, h2 { font-family: "bebas_neueregular", "arial narrow", arial, sans-serif; text-transform: uppercase; color: #333; }
-/* line 43, ../sass/fldc14.scss */
-h1 a, h2 a { text-decoration: none; }
+.cssanimations #bubble4 {
+  opacity: 0.5;
+  right: -9999px;
+  display: block;
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: bubblerise2 17s linear -14s infinite;
+  animation: bubblerise2 17s linear -14s infinite;
+  -moz-animation-name: bubblerise2;
+  /* Firefox does not like shorthand */
+  -moz-animation-duration: 17s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
 
-/* line 49, ../sass/fldc14.scss */
-h1 { font-size: 45px; margin: 10px 0; }
+.cssanimations #bubble5 {
+  opacity: 0.5;
+  right: -9999px;
+  display: block;
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: bubblerise1 17s linear -6s infinite;
+  animation: bubblerise1 17s linear -6s infinite;
+  -moz-animation-name: bubblerise1;
+  /* Firefox does not like shorthand */
+  -moz-animation-duration: 17s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
 
-/* line 54, ../sass/fldc14.scss */
-h3 { font-family: 'arial narrow', arial, helvetica, sans-serif; font-size: 20px; text-transform: uppercase; color: #333; }
+@keyframes bubblewhite {
+  0% {
+    left: 70%;
+    bottom: -600px;
+  }
 
-/* line 62, ../sass/fldc14.scss */
-p { font-size: 18px; }
+  33% {
+    left: 65%;
+    bottom: -200px;
+  }
 
-/* line 66, ../sass/fldc14.scss */
-button { font-family: "bebas_neueregular", "arial narrow", arial, sans-serif; text-transform: uppercase; border: 0; font-size: 50px; cursor: pointer; background-color: #fcb040; color: white; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
-/* line 75, ../sass/fldc14.scss */
-button:hover { background-color: #fca627; }
+  66% {
+    left: 70%;
+    bottom: 200px;
+  }
 
-/* ============================================================================= Layout ========================================================================== */
-/* line 86, ../sass/fldc14.scss */
-.wrapper { width: 95%; margin: 0 auto; text-align: center; }
-@media (min-width: 1200px) { /* line 86, ../sass/fldc14.scss */
-  .wrapper { width: 100%; max-width: 1100px; } }
-@media (min-width: 1700px) { /* line 86, ../sass/fldc14.scss */
-  .wrapper { max-width: 1500px; } }
+  100% {
+    left: 75%;
+    bottom: 600px;
+  }
+}
 
-/* ============================================================================= Heading Section ========================================================================== */
-/* line 105, ../sass/fldc14.scss */
-#heading { background-color: black; z-index: 10; position: fixed; top: 0; width: 100%; height: 100px; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; transition: all 0.1s; }
-/* line 114, ../sass/fldc14.scss */
-#heading.scrolldown { height: 60px; }
-/* line 117, ../sass/fldc14.scss */
-#heading.scrolldown h1, #heading.scrolldown nav { line-height: 60px; }
-/* line 122, ../sass/fldc14.scss */
-#heading h1 { float: left; line-height: 100px; margin: 0; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; transition: all 0.1s; }
-/* line 127, ../sass/fldc14.scss */
-#heading h1 a { display: block; text-indent: -9999px; background-image: url(../images/drupal-diver-no-bubble.svg); width: 130px; height: 120px; background-size: contain; background-repeat: no-repeat; color: #fcb040; margin: 5px; position: relative; -webkit-transition: all, 0.2s; -moz-transition: all, 0.2s; -o-transition: all, 0.2s; transition: all, 0.2s; }
-@media (min-width: 470px) { /* line 140, ../sass/fldc14.scss */
-  #heading h1 a:after { content: "#FLDC14"; position: absolute; left: 100%; text-indent: 0; } }
-@media (min-width: 700px) { /* line 127, ../sass/fldc14.scss */
-  #heading h1 a { font-size: 40px; margin: 0; text-indent: 0; background-image: none; width: auto; height: auto; display: inline; }
-  /* line 155, ../sass/fldc14.scss */
-  #heading h1 a:after { content: ""; } }
-@media (min-width: 900px) { /* line 127, ../sass/fldc14.scss */
-  #heading h1 a { font-size: 45px; } }
-/* line 162, ../sass/fldc14.scss */
-#heading h1 a:hover { color: #fdc572; }
-/* line 165, ../sass/fldc14.scss */
-#heading h1 a.scrolldown { width: 90px; height: 80px; }
-/* line 172, ../sass/fldc14.scss */
-#heading nav { display: none; float: right; font-family: "bebas_neueregular", "arial narrow", arial, sans-serif; text-transform: uppercase; font-size: 28px; line-height: 100px; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; transition: all 0.1s; }
-@media (min-width: 900px) { /* line 172, ../sass/fldc14.scss */
-  #heading nav { display: block; } }
-@media (min-width: 1200px) { /* line 172, ../sass/fldc14.scss */
-  #heading nav { font-size: 35px; } }
-/* line 186, ../sass/fldc14.scss */
-#heading nav ul { margin: 0; padding: 0; }
-/* line 189, ../sass/fldc14.scss */
-#heading nav ul ul { display: none; }
-/* line 194, ../sass/fldc14.scss */
-#heading nav li { margin: 0; display: inline-block; }
-/* line 199, ../sass/fldc14.scss */
-#heading nav a { padding: 10px 10px; color: white; text-decoration: none; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
-/* line 204, ../sass/fldc14.scss */
-#heading nav a:hover { color: #e4d400; }
+@-webkit-keyframes bubblewhite {
+  0% {
+    left: 70%;
+    bottom: -600px;
+  }
 
-/* line 214, ../sass/fldc14.scss */
-#mobile-menu { text-indent: -9999px; overflow: hidden; width: 50px; height: 50px; float: right; margin: 25px; cursor: pointer; background-image: url(../images/mobile-nav.svg); background-size: 30px; background-repeat: no-repeat; background-position: center center; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
-@media (min-width: 900px) { /* line 214, ../sass/fldc14.scss */
-  #mobile-menu { display: none; } }
-/* line 230, ../sass/fldc14.scss */
-#mobile-menu.scrolldown { margin: 5px; }
+  33% {
+    left: 65%;
+    bottom: -200px;
+  }
 
-/* ============================================================================= Main ========================================================================== */
-/* line 239, ../sass/fldc14.scss */
-#main { margin-top: 100px; }
-/* line 241, ../sass/fldc14.scss */
-#main .content { text-align: center; padding-bottom: 20px; }
-@media (min-width: 1200px) { /* line 241, ../sass/fldc14.scss */
-  #main .content { height: 0; padding-bottom: 45%; } }
-@media (min-width: 1700px) { /* line 241, ../sass/fldc14.scss */
-  #main .content { padding-bottom: 38%; } }
-/* line 252, ../sass/fldc14.scss */
-#main h1 { line-height: 1; font-size: 65px; margin-top: 20px; color: #0e73af; -webkit-text-stroke: 1px #0e73af; }
-@media (min-width: 900px) { /* line 252, ../sass/fldc14.scss */
-  #main h1 { margin-top: 100px; } }
-@media (min-width: 1700px) { /* line 252, ../sass/fldc14.scss */
-  #main h1 { font-size: 70px; margin-top: 200px; } }
-/* line 269, ../sass/fldc14.scss */
-#main h2 { color: #666; }
-@media (min-width: 1700px) { /* line 269, ../sass/fldc14.scss */
-  #main h2 { font-size: 40px; } }
-@media (min-width: 1700px) { /* line 275, ../sass/fldc14.scss */
-  #main p { font-size: 25px; } }
-/* line 280, ../sass/fldc14.scss */
-#main button { width: 90%; max-width: 380px; height: 90px; padding: 0; text-transform: uppercase; text-align: center; line-height: 90px; margin: 10px 0 20px 0; }
+  66% {
+    left: 70%;
+    bottom: 200px;
+  }
 
-/* line 296, ../sass/fldc14.scss */
-.icon { position: relative; color: #bbb; display: inline-block; text-decoration: none; font-size: 50px; line-height: 1; transition: color 800ms; }
+  100% {
+    left: 75%;
+    bottom: 600px;
+  }
+}
 
-/* line 306, ../sass/fldc14.scss */
-.icon:hover { color: #666; }
+@-moz-keyframes bubblewhite {
+  0% {
+    left: 70%;
+    bottom: -600px;
+  }
 
-/* line 310, ../sass/fldc14.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-drupal:before { font-family: 'Social Media Icons'; font-style: normal; font-weight: normal; line-height: 1; }
+  33% {
+    left: 65%;
+    bottom: -200px;
+  }
 
-/* line 319, ../sass/fldc14.scss */
-.icon-twitter:before { content: "\e000"; }
+  66% {
+    left: 70%;
+    bottom: 200px;
+  }
 
-/* line 323, ../sass/fldc14.scss */
-.icon-facebook:before { content: "\e003"; }
+  100% {
+    left: 75%;
+    bottom: 600px;
+  }
+}
 
-/* line 327, ../sass/fldc14.scss */
-.icon-drupal:before { content: "\e005"; }
+.cssanimations #bubble-white {
+  display: block;
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: bubblewhite 25s linear 0 infinite;
+  animation: bubblewhite 25s linear 0 infinite;
+  -moz-animation-name: bubblewhite;
+  /* Firefox does not like shorthand */
+  -moz-animation-duration: 25s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
 
-/* line 335, ../sass/fldc14.scss */
-#logo-container { position: relative; display: none; }
-@media (min-width: 700px) { /* line 335, ../sass/fldc14.scss */
-  #logo-container { display: block; width: 70%; margin: 0 auto; } }
-@media (min-width: 900px) { /* line 335, ../sass/fldc14.scss */
-  #logo-container { float: left; width: 50%; margin: 40px 0 40px -100px; } }
-@media (min-width: 1700px) { /* line 335, ../sass/fldc14.scss */
-  #logo-container { margin-top: 100px; } }
+/* =============================================================================
+    Base
+   ========================================================================== */
+.wrapper:after, #heading:after, #logo-container:after, #location-info:after, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
+}
 
-/* line 355, ../sass/fldc14.scss */
-#bubble1, #bubble2, #bubble3, #bubble4, #bubble5 { display: none; }
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-/* line 363, ../sass/fldc14.scss */
-.cssanimations #bubble1, .cssanimations #bubble2, .cssanimations #bubble3, .cssanimations #bubble4, .cssanimations #bubble5 { display: block; }
+body {
+  font-family: helvetica, arial;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
 
-/* ============================================================================= Turqoise ========================================================================== */
-/* line 376, ../sass/fldc14.scss */
-#images { background-color: #00cccc; min-height: 600px; position: relative; overflow: hidden; }
-/* line 381, ../sass/fldc14.scss */
-#images h1 { margin-top: 50px; color: white; }
-/* line 385, ../sass/fldc14.scss */
-#images:before { content: ""; width: 0; height: 0; position: absolute; left: 50%; margin-left: -40px; border-left: 40px solid transparent; border-right: 40px solid transparent; border-top: 40px solid white; }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-/* line 399, ../sass/fldc14.scss */
-#bubble-white { position: absolute; bottom: 200px; width: 45%; height: auto; left: 80%; }
+h1, h2 {
+  font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
+  text-transform: uppercase;
+  color: #0e73af;
+}
+h1 a, h2 a {
+  text-decoration: none;
+}
 
-/* ============================================================================= Location Map ========================================================================== */
-/* line 411, ../sass/fldc14.scss */
-#location { background-image: url(../images/map-background.jpg); background-position: center center; }
-/* line 414, ../sass/fldc14.scss */
-#location:before { content: ""; width: 0; height: 0; position: absolute; left: 50%; margin-left: -40px; border-left: 40px solid transparent; border-right: 40px solid transparent; border-top: 40px solid #00cccc; }
+h1 {
+  font-size: 45px;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 55px;
+  }
+}
 
-/* line 427, ../sass/fldc14.scss */
-#location-info { margin: 50px auto; padding: 20px 30px; width: 95%; background-color: #0e73af; color: white; }
-@media (min-width: 470px) { /* line 427, ../sass/fldc14.scss */
-  #location-info { width: 80%; } }
-@media (min-width: 700px) { /* line 427, ../sass/fldc14.scss */
-  #location-info { max-width: 360px; margin: 75px 0; float: right; } }
-/* line 442, ../sass/fldc14.scss */
-#location-info h1 { color: #e4d400; margin: 0; }
-/* line 446, ../sass/fldc14.scss */
-#location-info h2 { color: white; margin: 0; text-align: left; font-size: 35px; line-height: 1.5; }
-/* line 453, ../sass/fldc14.scss */
-#location-info h3 { color: white; margin: 0; text-align: left; margin-bottom: 20px; }
-/* line 459, ../sass/fldc14.scss */
-#location-info p { font-size: 16px; color: white; margin: 0; text-align: left; }
+h3 {
+  font-family: 'arial narrow', arial, helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
+}
 
-/* ============================================================================= Sponsors ========================================================================== */
-/* line 473, ../sass/fldc14.scss */
-#sponsors ul { padding: 0; margin: 0; }
-/* line 477, ../sass/fldc14.scss */
-#sponsors li { margin: 0; padding: 0; list-style: none; display: inline-block; text-align: center; min-width: 100px; }
-/* line 484, ../sass/fldc14.scss */
-#sponsors li img { max-width: 90%; }
-/* line 488, ../sass/fldc14.scss */
-#sponsors .sponsor-platinum li { width: 80%; }
-@media (min-width: 470px) { /* line 488, ../sass/fldc14.scss */
-  #sponsors .sponsor-platinum li { width: 100%; }
-  /* line 492, ../sass/fldc14.scss */
-  #sponsors .sponsor-platinum li:first-child:nth-last-child(2n), #sponsors .sponsor-platinum li:first-child:nth-last-child(2n) ~ li { width: 45%; }
-  /* line 496, ../sass/fldc14.scss */
-  #sponsors .sponsor-platinum li:first-child:nth-last-child(3n), #sponsors .sponsor-platinum li:first-child:nth-last-child(3n) ~ li { width: 30%; }
-  /* line 500, ../sass/fldc14.scss */
-  #sponsors .sponsor-platinum li:first-child:nth-last-child(4n), #sponsors .sponsor-platinum li:first-child:nth-last-child(4n) ~ li { width: 24%; } }
-/* line 507, ../sass/fldc14.scss */
-#sponsors .sponsor-gold li { width: 40%; }
-@media (min-width: 470px) { /* line 507, ../sass/fldc14.scss */
-  #sponsors .sponsor-gold li { width: 30%; } }
-@media (min-width: 700px) { /* line 507, ../sass/fldc14.scss */
-  #sponsors .sponsor-gold li { width: 23%; } }
-/* line 517, ../sass/fldc14.scss */
-#sponsors .sponsor-silver li, #sponsors .sponsor-bronze li { width: 12%; }
-/* line 522, ../sass/fldc14.scss */
-#sponsors .sponsor-platinum { color: #666; }
-/* line 525, ../sass/fldc14.scss */
-#sponsors .sponsor-gold { color: #e6c200; }
-/* line 528, ../sass/fldc14.scss */
-#sponsors .sponsor-silver { color: #999; }
-/* line 531, ../sass/fldc14.scss */
-#sponsors .sponsor-bronze { color: #998100; }
+p {
+  font-size: 18px;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+button {
+  font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 50px;
+  cursor: pointer;
+  background-color: #fcb040;
+  color: white;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+button:hover {
+  background-color: #fca627;
+}
+
+/* =============================================================================
+    Layout
+   ========================================================================== */
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 1100px;
+  }
+}
+@media (min-width: 1700px) {
+  .wrapper {
+    max-width: 1500px;
+  }
+}
+
+.not-front .content {
+  text-align: left;
+}
+@media (min-width: 900px) {
+  .not-front .content {
+    float: left;
+    width: 67%;
+    padding-right: 40px;
+  }
+}
+
+#sidebar-first {
+  text-align: left;
+}
+@media (min-width: 900px) {
+  #sidebar-first {
+    float: right;
+    width: 33%;
+  }
+}
+
+/* =============================================================================
+    Heading Section
+   ========================================================================== */
+#heading {
+  background-color: black;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+#heading.scrolldown {
+  height: 60px;
+}
+#heading.scrolldown h1, #heading.scrolldown nav {
+  line-height: 60px;
+}
+#heading h1 {
+  float: left;
+  line-height: 100px;
+  margin: 0;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+#heading h1 a {
+  display: block;
+  text-indent: -9999px;
+  background-image: url(../images/drupal-diver-no-bubble.svg);
+  width: 130px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #fcb040;
+  margin: 5px;
+  padding: 0;
+  position: relative;
+  -webkit-transition: all, 0.2s;
+  -moz-transition: all, 0.2s;
+  -o-transition: all, 0.2s;
+  transition: all, 0.2s;
+}
+@media (min-width: 470px) {
+  #heading h1 a:after {
+    content: "#FLDC14";
+    position: absolute;
+    left: 100%;
+    text-indent: 0;
+  }
+}
+@media (min-width: 700px) {
+  #heading h1 a {
+    font-size: 40px;
+    margin: 0;
+    text-indent: 0;
+    background-image: none;
+    width: auto;
+    height: auto;
+    display: inline;
+  }
+  #heading h1 a:after {
+    content: "";
+  }
+}
+@media (min-width: 900px) {
+  #heading h1 a {
+    font-size: 38px;
+  }
+}
+@media (min-width: 1200px) {
+  #heading h1 a {
+    font-size: 45px;
+  }
+}
+#heading h1 a:hover {
+  color: #fdc572;
+}
+#heading h1 a.scrolldown {
+  width: 90px;
+  height: 80px;
+}
+#heading nav {
+  display: none;
+  float: right;
+  font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 100px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+@media (min-width: 900px) {
+  #heading nav {
+    display: block;
+  }
+}
+@media (min-width: 950px) {
+  #heading nav {
+    font-size: 25px;
+  }
+}
+#heading nav > ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#heading nav > ul ul {
+  display: none;
+}
+#heading li {
+  margin: 0;
+  display: inline-block;
+}
+#heading a {
+  padding: 0 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#heading a:hover {
+  color: #e4d400;
+}
+
+#login-links {
+  float: right;
+  line-height: 100px;
+  display: block;
+  margin-left: 10px;
+  background-color: #55c2c2;
+  -webkit-transition: all, 0.1s;
+  -moz-transition: all, 0.1s;
+  -o-transition: all, 0.1s;
+  transition: all, 0.1s;
+}
+#login-links.scrolldown {
+  line-height: 60px;
+}
+#login-links a:hover {
+  color: #333;
+}
+
+#mobile-menu {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin: 25px;
+  cursor: pointer;
+  background-image: url(../images/mobile-nav.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media (min-width: 900px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+#mobile-menu.scrolldown {
+  margin: 5px;
+}
+
+/* =============================================================================
+    Hero
+   ========================================================================== */
+#hero {
+  margin-top: 100px;
+}
+#hero .content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  #hero .content {
+    height: 0;
+    padding-bottom: 45%;
+  }
+}
+@media (min-width: 1700px) {
+  #hero .content {
+    padding-bottom: 38%;
+  }
+}
+#hero h1 {
+  line-height: 1;
+  font-size: 65px;
+  margin-top: 20px;
+  -webkit-text-stroke: 1px #0e73af;
+}
+@media (min-width: 900px) {
+  #hero h1 {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 1700px) {
+  #hero h1 {
+    font-size: 70px;
+    margin-top: 200px;
+  }
+}
+#hero h2 {
+  color: #666;
+}
+@media (min-width: 1700px) {
+  #hero h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1700px) {
+  #hero p {
+    font-size: 25px;
+  }
+}
+#hero button {
+  width: 90%;
+  max-width: 380px;
+  height: 90px;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 90px;
+  margin: 10px 0 20px 0;
+}
+
+.icon {
+  position: relative;
+  color: #bbb;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 50px;
+  line-height: 1;
+  transition: color 800ms;
+}
+
+.icon:hover {
+  color: #666;
+}
+
+.icon-twitter:before,
+.icon-facebook:before,
+.icon-drupal:before {
+  font-family: 'Social Media Icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.icon-twitter:before {
+  content: "\e000";
+}
+
+.icon-facebook:before {
+  content: "\e003";
+}
+
+.icon-drupal:before {
+  content: "\e005";
+}
+
+#logo-container {
+  position: relative;
+  display: none;
+}
+@media (min-width: 700px) {
+  #logo-container {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 900px) {
+  #logo-container {
+    float: left;
+    width: 50%;
+    margin: 40px 0 40px -100px;
+  }
+}
+@media (min-width: 1700px) {
+  #logo-container {
+    margin-top: 100px;
+  }
+}
+
+#bubble1,
+#bubble2,
+#bubble3,
+#bubble4,
+#bubble5 {
+  display: none;
+}
+
+.cssanimations #bubble1,
+.cssanimations #bubble2,
+.cssanimations #bubble3,
+.cssanimations #bubble4,
+.cssanimations #bubble5 {
+  display: block;
+}
+
+/* =============================================================================
+    Main
+   ========================================================================== */
+#main {
+  margin-top: 100px;
+}
+#main .wrapper {
+  text-align: left;
+}
+
+/* =============================================================================
+    Turqoise
+   ========================================================================== */
+#images {
+  background-color: #55c2c2;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#images h1 {
+  margin-top: 50px;
+  color: white;
+}
+#images:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid white;
+}
+
+#bubble-white {
+  position: absolute;
+  bottom: 200px;
+  width: 45%;
+  height: auto;
+  left: 80%;
+}
+
+/* =============================================================================
+    Location Map
+   ========================================================================== */
+#location {
+  background-image: url(../images/map-background.jpg);
+  background-position: center center;
+}
+#location:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #55c2c2;
+}
+
+#location-info {
+  margin: 50px auto;
+  padding: 20px 30px;
+  width: 95%;
+  background-color: #0e73af;
+  color: white;
+}
+@media (min-width: 470px) {
+  #location-info {
+    width: 80%;
+  }
+}
+@media (min-width: 700px) {
+  #location-info {
+    max-width: 360px;
+    margin: 75px 0;
+    float: right;
+  }
+}
+#location-info h1 {
+  color: #e4d400;
+  margin: 0;
+}
+#location-info h2 {
+  color: white;
+  margin: 0;
+  text-align: left;
+  font-size: 35px;
+  line-height: 1.5;
+}
+#location-info h3 {
+  color: white;
+  margin: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+#location-info p {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  text-align: left;
+}
+
+/* =============================================================================
+    Sponsors
+   ========================================================================== */
+#sponsors ul {
+  padding: 0;
+  margin: 0;
+}
+#sponsors li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  min-width: 100px;
+  position: relative;
+}
+#sponsors li img {
+  max-width: 90%;
+}
+#sponsors li:hover:after {
+  content: "@todo - put in a cool hover effect";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #55c2c2;
+  color: white;
+  font-weight: bold;
+}
+#sponsors .sponsor-platinum li {
+  width: 80%;
+}
+@media (min-width: 470px) {
+  #sponsors .sponsor-platinum li {
+    width: 100%;
+  }
+  #sponsors .sponsor-platinum li:first-child:nth-last-child(2n), #sponsors .sponsor-platinum li:first-child:nth-last-child(2n) ~ li {
+    width: 45%;
+  }
+  #sponsors .sponsor-platinum li:first-child:nth-last-child(3n), #sponsors .sponsor-platinum li:first-child:nth-last-child(3n) ~ li {
+    width: 30%;
+  }
+  #sponsors .sponsor-platinum li:first-child:nth-last-child(4n), #sponsors .sponsor-platinum li:first-child:nth-last-child(4n) ~ li {
+    width: 24%;
+  }
+}
+#sponsors .sponsor-gold li {
+  width: 40%;
+}
+@media (min-width: 470px) {
+  #sponsors .sponsor-gold li {
+    width: 30%;
+  }
+}
+@media (min-width: 700px) {
+  #sponsors .sponsor-gold li {
+    width: 23%;
+  }
+}
+#sponsors .sponsor-silver li,
+#sponsors .sponsor-bronze li {
+  width: 12%;
+}
+#sponsors .sponsor-platinum {
+  color: #666;
+}
+#sponsors .sponsor-gold {
+  color: #e6c200;
+}
+#sponsors .sponsor-silver {
+  color: #999;
+}
+#sponsors .sponsor-bronze {
+  color: #998100;
+}

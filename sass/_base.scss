@@ -1,6 +1,6 @@
-@import 'compass/support';                     // Add Compass' IE and vendor prefix support variables.
-@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
-@import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
+// @import 'compass/support';
+// @import 'compass/utilities/sprites';
+@import 'compass/css3';
 
 
 
@@ -8,12 +8,12 @@
 
 $yellow: #E4D400;
 $orange: #FCB040;
-$turquois: #0cc;
+$turquois: #55C2C2;
 $blue: #0E73AF;
 
 
-// Breakpoints
-// Note that this are min-width values
+// Breakpoints min-width values
+
 $wide: 1700px;
 $normal: 1200px;
 $tablet_wide: 900px;

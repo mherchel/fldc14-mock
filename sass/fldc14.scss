@@ -39,7 +39,7 @@ img {
 h1, h2 {
   font-family: $heading;
   text-transform: uppercase;
-  color: #333;
+  color: $blue;
   a {
     text-decoration: none;
   }
@@ -49,6 +49,10 @@ h1, h2 {
 h1 {
   font-size: 45px;
   margin: 10px 0;
+  line-height: 1.2;
+  @include breakpoint($normal) {
+    font-size: 55px;
+  }
 }
 
 h3 {
@@ -61,6 +65,11 @@ h3 {
 
 p {
   font-size: 18px;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
 }
 
 button {
@@ -95,6 +104,23 @@ button {
   @include breakpoint($wide) {
     max-width: 1500px;
   }
+}
+
+.not-front .content {
+  text-align: left;
+  @include breakpoint($tablet_wide) {
+    float: left;
+    width: 67%;
+    padding-right: 40px;
+  }
+}
+
+#sidebar-first {
+  text-align: left;
+  @include breakpoint($tablet_wide) {
+    float: right;
+    width: 33%;
+  }  
 }
 
 
@@ -134,6 +160,7 @@ button {
       background-repeat: no-repeat;   
       color: $orange;
       margin: 5px;
+      padding: 0;
       position: relative;
       @include transition(all, .2s);
       @include breakpoint($smartphone_wide) {
@@ -157,6 +184,9 @@ button {
         }
       }
       @include breakpoint($tablet_wide) {
+        font-size: 38px;
+      }      
+      @include breakpoint($normal) {
         font-size: 45px;
       }
       &:hover {
@@ -174,16 +204,17 @@ button {
     float: right;
     font-family: $heading;
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 100px;
     @include transition(all .1s);
     @include breakpoint($tablet_wide) {
       display: block;
     }
-    @include breakpoint($normal) {
-      font-size: 35px;
-    }
-    ul {
+    @include breakpoint(950px) {
+      font-size: 25px;
+    }    
+    > ul {
+      float: left;
       margin: 0;
       padding: 0;
       ul {
@@ -191,25 +222,44 @@ button {
         // @todo get submenus working
       }
     }
-    li {
-      margin: 0;
-      display: inline-block;
-
-    }
-    a {
-      padding: 10px 10px;
-      color: white;
-      text-decoration: none;
-      @include transition(all .2s);
-      &:hover {
-        color: $yellow;
-      }
-
-    }
   }
+  li {
+    margin: 0;
+    display: inline-block;
+
+  }
+  a {
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    @include transition(all .2s);
+    &:hover {
+      color: $yellow;
+    }
+
+  }  
 
   // /#heading
 }
+
+#login-links {
+  float: right;
+  line-height: 100px;
+  display: block;
+  margin-left: 10px;
+  background-color: $turquois;
+  @include transition(all, 0.1s);
+  &.scrolldown {
+    line-height: 60px;
+  }
+  a {
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
 
 #mobile-menu {
   text-indent: -9999px;
@@ -233,10 +283,10 @@ button {
 }
 
 /* =============================================================================
-    Main
+    Hero
    ========================================================================== */
 
-#main {
+#hero {
   margin-top: 100px;
   .content {
     text-align: center;
@@ -253,7 +303,6 @@ button {
     line-height: 1;
     font-size: 65px;
     margin-top: 20px;
-    color: $blue;
     -webkit-text-stroke: 1px $blue;
     // background:  -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
     // -webkit-background-clip: text;
@@ -369,6 +418,17 @@ button {
 }
 
 /* =============================================================================
+    Main
+   ========================================================================== */
+
+#main {
+  margin-top: 100px;
+  .wrapper {
+    text-align: left;
+  }
+}
+
+/* =============================================================================
     Turqoise
    ========================================================================== */
 
@@ -481,8 +541,21 @@ button {
     display: inline-block;
     text-align: center;
     min-width: 100px;
+    position: relative;
     img {
       max-width: 90%;
+    }
+    &:hover:after {
+      content: "@todo - put in a cool hover effect";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      background-color: $turquois;
+      color: white;
+      font-weight: bold;
     }
   }
   .sponsor-platinum li {
