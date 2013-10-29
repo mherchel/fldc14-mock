@@ -1,0 +1,28 @@
+
+// Fonts
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../font/BebasNeue-webfont.eot');
+    src: url('../font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/BebasNeue-webfont.woff') format('woff'),
+         url('../font/BebasNeue-webfont.ttf') format('truetype'),
+         url('../font/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Social Media Icons";
+  src: url('../font/social-media-icons.eot');
+  src: url('../font/social-media-icons.eot?#iefix') format('eot'),
+       url('../font/social-media-icons.woff') format('woff'),
+       url('../font/social-media-icons.ttf') format('truetype'),
+       url('../font/social-media-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+
+$heading: 'bebas_neueregular', 'arial narrow', arial, sans-serif;
