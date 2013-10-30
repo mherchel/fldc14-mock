@@ -437,6 +437,10 @@ h1, h2 {
   text-transform: uppercase;
   color: #0e73af;
   line-height: 1.2;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 h1 a, h2 a {
   text-decoration: none;
@@ -473,6 +477,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  font-size: 18px;
+}
+
 /* =============================================================================
     Forms
    ========================================================================== */
@@ -497,7 +505,7 @@ button:hover {
     Layout
    ========================================================================== */
 .wrapper {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -515,22 +523,36 @@ button:hover {
 
 .not-front .content {
   text-align: left;
+  padding: 10px;
 }
 @media (min-width: 900px) {
   .not-front .content {
     float: left;
     width: 67%;
-    padding-right: 40px;
   }
+}
+@media (min-width: 1200px) {
+  .not-front .content {
+    padding: 20px 20px 20px 0;
+  }
+}
+
+#main {
+  margin-top: 100px;
+}
+#main .wrapper {
+  text-align: left;
 }
 
 #sidebar-first {
   text-align: left;
+  padding: 20px;
 }
 @media (min-width: 900px) {
   #sidebar-first {
     float: right;
     width: 33%;
+    padding: 10px 0;
   }
 }
 
@@ -592,7 +614,7 @@ button:hover {
 @media (min-width: 700px) {
   #heading h1 a {
     font-size: 40px;
-    margin: 0;
+    margin: 0 0 0 10px;
     text-indent: 0;
     background-image: none;
     width: auto;
@@ -611,6 +633,7 @@ button:hover {
 @media (min-width: 1200px) {
   #heading h1 a {
     font-size: 45px;
+    margin: 0;
   }
 }
 #heading h1 a:hover {
@@ -625,7 +648,6 @@ button:hover {
   float: right;
   font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
   line-height: 100px;
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -635,11 +657,6 @@ button:hover {
 @media (min-width: 900px) {
   #heading nav {
     display: block;
-  }
-}
-@media (min-width: 950px) {
-  #heading nav {
-    font-size: 25px;
   }
 }
 #heading nav > ul {
@@ -653,6 +670,12 @@ button:hover {
 #heading li {
   margin: 0;
   display: inline-block;
+  font-size: 20px;
+}
+@media (min-width: 950px) {
+  #heading li {
+    font-size: 25px;
+  }
 }
 #heading a {
   padding: 0 10px;
@@ -671,6 +694,7 @@ button:hover {
 #login-links {
   float: right;
   line-height: 100px;
+  font-size: 20px;
   display: block;
   margin-left: 10px;
   background-color: #55c2c2;
@@ -678,6 +702,11 @@ button:hover {
   -moz-transition: all, 0.1s;
   -o-transition: all, 0.1s;
   transition: all, 0.1s;
+}
+@media (min-width: 950px) {
+  #login-links {
+    font-size: 25px;
+  }
 }
 #login-links.scrolldown {
   line-height: 60px;
@@ -742,6 +771,12 @@ button:hover {
 @media (min-width: 900px) {
   #hero h1 {
     margin-top: 100px;
+    font-size: 55px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero h1 {
+    font-size: 65px;
   }
 }
 @media (min-width: 1700px) {
@@ -819,6 +854,7 @@ button:hover {
     display: block;
     width: 70%;
     margin: 0 auto;
+    padding-right: 7%;
   }
 }
 @media (min-width: 900px) {
@@ -826,6 +862,7 @@ button:hover {
     float: left;
     width: 50%;
     margin: 40px 0 40px -100px;
+    padding-right: 0;
   }
 }
 @media (min-width: 1700px) {
@@ -853,13 +890,6 @@ button:hover {
 /* =============================================================================
     Main
    ========================================================================== */
-#main {
-  margin-top: 120px;
-}
-#main .wrapper {
-  text-align: left;
-}
-
 /* =============================================================================
     Sidebar
    ========================================================================== */
@@ -946,8 +976,8 @@ button:hover {
 }
 @media (min-width: 700px) {
   #location-info {
-    max-width: 360px;
-    margin: 75px 0;
+    max-width: 350px;
+    margin: 75px 20px;
     float: right;
   }
 }
@@ -980,7 +1010,7 @@ button:hover {
    ========================================================================== */
 #sponsors ul {
   padding: 0;
-  margin: 0;
+  margin: 0 0 40px 0;
 }
 #sponsors li {
   margin: 0;

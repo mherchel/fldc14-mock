@@ -37,6 +37,7 @@ h1, h2 {
   text-transform: uppercase;
   color: $blue;
   line-height: 1.2;
+  @include transition(0.2s);
   a {
     text-decoration: none;
   }
@@ -73,5 +74,7 @@ a {
   text-decoration: none;
 }
 
-
+li {
+  font-size: 18px;
+}
 

@@ -49,7 +49,7 @@
       }
       @include breakpoint($tablet_narrow) {
         font-size: 40px;
-        margin: 0;
+        margin: 0 0 0 10px;
         text-indent: 0;
         background-image: none;
         width: auto;
@@ -64,6 +64,7 @@
       }      
       @include breakpoint($normal) {
         font-size: 45px;
+        margin: 0;
       }
       &:hover {
         color: lighten($orange, 10%);
@@ -80,15 +81,11 @@
     float: right;
     font-family: $heading;
     text-transform: uppercase;
-    font-size: 20px;
     line-height: 100px;
     @include transition(all .1s);
     @include breakpoint($tablet_wide) {
       display: block;
-    }
-    @include breakpoint(950px) {
-      font-size: 25px;
-    }    
+    } 
     > ul {
       float: left;
       margin: 0;
@@ -102,7 +99,10 @@
   li {
     margin: 0;
     display: inline-block;
-
+    font-size: 20px;
+    @include breakpoint($tablet_wide_1) {
+      font-size: 25px;
+    }      
   }
   a {
     padding: 0 10px;
@@ -122,10 +122,14 @@
 #login-links {
   float: right;
   line-height: 100px;
+  font-size: 20px;
   display: block;
   margin-left: 10px;
   background-color: $turquois;
   @include transition(all, 0.1s);
+  @include breakpoint($tablet_wide_1) {
+    font-size: 25px;
+  }    
   &.scrolldown {
     line-height: 60px;
   }
