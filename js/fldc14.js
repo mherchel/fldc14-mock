@@ -5,14 +5,14 @@ $(document ).ready(function() {
 		$( "#heading" ).addClass( "scrolldown" );
 		$( "#heading h1 a" ).addClass( "scrolldown" );
 		$( "#mobile-menu" ).addClass( "scrolldown" );
-		$( "#login-links" ).addClass( "scrolldown" );
+		$( "#login-header" ).addClass( "scrolldown" );
 		
 	}
 	if($(window).scrollTop() < $('#heading').outerHeight()) {
 		$( "#heading" ).removeClass( "scrolldown" );
 		$( "#heading h1 a" ).removeClass( "scrolldown" );
 		$( "#mobile-menu" ).removeClass( "scrolldown" );
-		$( "#login-links" ).removeClass( "scrolldown" );
+		$( "#login-header" ).removeClass( "scrolldown" );
 	}	
 	});
 

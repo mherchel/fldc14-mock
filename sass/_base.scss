@@ -6,22 +6,13 @@
    ========================================================================== */
 
 
-%clearfix {
-  &:after,
-  &:before {
-    display: table;
-    content: "";
-    clear: both;
-  }
-}
 
 *, *:before, *:after {
   @include box-sizing(border-box);
 }
 
-
 body {
-  font-family: helvetica, arial;
+  font-family: $font-normal;
   line-height: 1.7;
   color: #666;
   margin: 0;
@@ -30,10 +21,11 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  border: 0; // Necessary for IE in some cases
 }
 
 h1, h2 {
-  font-family: $heading;
+  font-family: $font-heading;
   text-transform: uppercase;
   color: $blue;
   line-height: 1.2;

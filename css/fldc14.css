@@ -17,6 +17,12 @@
   font-style: normal;
 }
 
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
+}
+
 /* =============================================================================
     Animations
    ========================================================================== */
@@ -405,15 +411,15 @@
   -moz-animation-timing-function: linear;
 }
 
-/* =============================================================================
-    Base
-   ========================================================================== */
-.wrapper:after, #heading:after, #logo-container:after, #location-info:after, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
 }
 
+/* =============================================================================
+    Base
+   ========================================================================== */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -421,7 +427,7 @@
 }
 
 body {
-  font-family: helvetica, arial;
+  font-family: helvetica, arial, sans-serif;
   line-height: 1.7;
   color: #666;
   margin: 0;
@@ -430,6 +436,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  border: 0;
 }
 
 h1, h2 {
@@ -481,10 +488,16 @@ li {
   font-size: 18px;
 }
 
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
+}
+
 /* =============================================================================
     Forms
    ========================================================================== */
-button {
+button, input[type="submit"] {
   font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
   text-transform: uppercase;
   border: 0;
@@ -497,8 +510,67 @@ button {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-button:hover {
+button:hover, input[type="submit"]:hover {
   background-color: #fca627;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 0;
+  background-color: #ddd;
+  font-size: 18px;
+  max-width: 100%;
+}
+
+label {
+  display: block;
+}
+
+form .description {
+  color: #999;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.form-item {
+  padding: 10px 0;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+#login-links {
+  margin-bottom: 20px;
+}
+#login-links a {
+  display: block;
+  float: left;
+  background-color: #eee;
+  padding: 5px;
+  color: #999;
+  font-family: "arial narrow", arial, helvetica, sans-serif;
+}
+@media (min-width: 470px) {
+  #login-links a {
+    padding: 10px 20px;
+    font-family: helvetica, arial, sans-serif;
+  }
+}
+#login-links a.lt-active {
+  background-color: #55c2c2;
+  color: white;
+}
+
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 /* =============================================================================
@@ -509,9 +581,19 @@ button:hover {
   margin: 0 auto;
   text-align: center;
 }
+.front .wrapper {
+  width: 95%;
+}
+@media (min-width: 1200px) {
+  .front .wrapper {
+    width: 100%;
+  }
+}
+.front #heading .wrapper {
+  width: 100%;
+}
 @media (min-width: 1200px) {
   .wrapper {
-    width: 100%;
     max-width: 1100px;
   }
 }
@@ -554,6 +636,12 @@ button:hover {
     width: 33%;
     padding: 10px 0;
   }
+}
+
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 /* =============================================================================
@@ -691,7 +779,7 @@ button:hover {
   color: #e4d400;
 }
 
-#login-links {
+#login-header {
   float: right;
   line-height: 100px;
   font-size: 20px;
@@ -704,14 +792,14 @@ button:hover {
   transition: all, 0.1s;
 }
 @media (min-width: 950px) {
-  #login-links {
+  #login-header {
     font-size: 25px;
   }
 }
-#login-links.scrolldown {
+#login-header.scrolldown {
   line-height: 60px;
 }
-#login-links a:hover {
+#login-header a:hover {
   color: #333;
 }
 
@@ -739,6 +827,12 @@ button:hover {
 }
 #mobile-menu.scrolldown {
   margin: 5px;
+}
+
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 /* =============================================================================
@@ -799,7 +893,7 @@ button:hover {
     font-size: 25px;
   }
 }
-#hero button {
+#hero button, #hero input[type="submit"] {
   width: 90%;
   max-width: 380px;
   height: 90px;

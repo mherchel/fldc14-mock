@@ -15,7 +15,6 @@
   @include transition(all .1s);
   &.scrolldown {
     height: 60px;
-    // background-color: rgba(0,0,0,0.7);
     h1, nav {
       line-height: 60px;
     }
@@ -79,7 +78,7 @@
   nav {
     display: none;
     float: right;
-    font-family: $heading;
+    font-family: $font-heading;
     text-transform: uppercase;
     line-height: 100px;
     @include transition(all .1s);
@@ -119,7 +118,7 @@
   // /#heading
 }
 
-#login-links {
+#login-header {
   float: right;
   line-height: 100px;
   font-size: 20px;

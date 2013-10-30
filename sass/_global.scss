@@ -21,3 +21,15 @@ $tablet_wide: 900px;
 $tablet_wide_1: 950px;
 $tablet_narrow: 700px;
 $smartphone_wide: 470px;
+
+
+// Silent Extends
+
+%clearfix {
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}

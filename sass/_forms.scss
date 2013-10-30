@@ -6,7 +6,7 @@
    ========================================================================== */
 
 button {
-  font-family: $heading;
+  font-family: $font-heading;
   text-transform: uppercase;
   border: 0;
   font-size: 50px;
@@ -18,3 +18,62 @@ button {
     background-color: darken($orange, 5%);
   }
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 0;
+  background-color: #ddd;
+  font-size: 18px;
+  max-width: 100%;
+}
+
+label {
+  display: block;
+}
+
+form {
+  .description {
+    color: #999;
+    font-style: italic;
+    font-size: 14px;
+  }
+}
+
+.form-item {
+  padding: 10px 0;
+}
+
+input[type="submit"] {
+  @extend button;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+
+
+// Login Toboggan Links
+#login-links {
+  @extend %clearfix;
+  margin-bottom: 20px;
+  a {
+    display: block;
+    float: left;
+    background-color: #eee;
+    padding: 5px;
+    color: #999;
+    font-family: $font-narrow;
+    @include breakpoint($smartphone_wide) {
+      padding: 10px 20px;
+      font-family: $font-normal;
+    }
+    &.lt-active {
+      background-color: $turquois;
+      color: white;
+    }
+  }
+}
+
