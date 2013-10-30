@@ -546,20 +546,29 @@ input[type="submit"] {
 }
 
 #login-links {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 #login-links a {
   display: block;
   float: left;
   background-color: #eee;
-  padding: 5px;
+  padding: 10px 0;
+  width: 50%;
+  text-align: center;
   color: #999;
+  font-size: 14px;
   font-family: "arial narrow", arial, helvetica, sans-serif;
 }
 @media (min-width: 470px) {
   #login-links a {
+    font-size: 16px;
+  }
+}
+@media (min-width: 700px) {
+  #login-links a {
+    font-size: 18px;
+    width: auto;
     padding: 10px 20px;
-    font-family: helvetica, arial, sans-serif;
   }
 }
 #login-links a.lt-active {
@@ -1175,4 +1184,103 @@ input[type="submit"] {
 }
 #sponsors .sponsor-bronze {
   color: #998100;
+}
+
+#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/* =============================================================================
+    Footer Section
+   ========================================================================== */
+#footer {
+  background-color: #0e73af;
+  padding: 30px 10px 20px 10px;
+  position: relative;
+}
+#footer .content {
+  color: #eee;
+  padding: 10px 0;
+}
+@media (min-width: 700px) {
+  #footer .content {
+    float: left;
+    padding: 0 20px;
+  }
+}
+#footer .content a {
+  color: #fff;
+}
+#footer:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -40px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid white;
+}
+
+#footer-nav {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+@media (min-width: 700px) {
+  #footer-nav {
+    float: left;
+  }
+}
+#footer-nav ul {
+  padding: 0;
+}
+#footer-nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
+}
+#footer-nav li a {
+  font-size: 32px;
+}
+#footer-nav li li {
+  font-family: helvetica, arial, sans-serif;
+}
+#footer-nav li li a {
+  color: white;
+  font-size: 22px;
+}
+@media (min-width: 700px) {
+  #footer-nav li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+  }
+  #footer-nav li li {
+    display: block;
+    padding: 0;
+  }
+}
+
+#social-icons-footer {
+  padding-top: 20px;
+}
+@media (min-width: 700px) {
+  #social-icons-footer {
+    float: right;
+  }
+}
+#social-icons-footer .icon {
+  font-size: 35px;
+  padding: 5px;
+  margin: 0 5px;
+  color: white;
+  background-color: transparent;
+  border-radius: 50%;
+  border: solid 2px white;
 }

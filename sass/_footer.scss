@@ -1,0 +1,87 @@
+@import "global";
+
+/* =============================================================================
+    Footer Section
+   ========================================================================== */
+
+ #footer {
+ 	background-color: $blue;
+ 	padding: 30px 10px 20px 10px;
+ 	position: relative;
+ 	.content {
+ 		color: #eee;
+ 		padding: 10px 0;
+ 		@include breakpoint($tablet_narrow) {
+ 			float: left;
+ 			padding: 0 20px;
+ 		}
+ 		a {
+ 			color: #fff;
+ 		}
+ 	}
+	&:before {
+		content: "";
+		width: 0; 
+		height: 0; 
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -40px;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		border-top: 40px solid white;
+	} 	
+ }
+
+ #footer-nav {
+ 	padding: 0;
+ 	margin: 0;
+ 	text-align: left;
+ 	@include breakpoint($tablet_narrow) {
+ 		float: left;
+ 	}
+ 	ul {
+ 		padding: 0;
+ 	}
+ 	li {
+ 		margin: 0;
+ 		padding: 0;
+ 		list-style: none;
+ 		font-family: $font-heading;
+ 		a {
+ 			font-size: 32px;
+ 		}
+ 		li {
+ 			font-family: $font-normal;
+ 			a {
+ 				color: white;
+ 				font-size: 22px;
+ 			}
+ 		}
+ 		@include breakpoint($tablet_narrow) {
+ 			display: inline-block;
+ 			vertical-align: top;
+ 			padding: 20px;
+ 			li {
+ 				display: block;
+ 				padding: 0;
+ 			}
+ 		}
+ 	}
+ }
+
+ #social-icons-footer {
+ 	padding-top: 20px;
+ 	@include breakpoint($tablet_narrow) {
+ 		float: right;
+ 	}
+ 	.icon {
+ 		font-size: 35px;
+ 		padding: 5px;
+ 		margin: 0 5px;
+ 		color: white;
+	 	background-color: transparent;
+	 	border-radius: 50%;
+	 	border: solid 2px white;
+ 	}
+ }

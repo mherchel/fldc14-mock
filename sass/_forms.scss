@@ -58,17 +58,24 @@ input[type="submit"] {
 // Login Toboggan Links
 #login-links {
   @extend %clearfix;
-  margin-bottom: 20px;
+  margin: 20px 0;
   a {
     display: block;
     float: left;
     background-color: #eee;
-    padding: 5px;
+    padding: 10px 0;
+    width: 50%;
+    text-align: center;
     color: #999;
+    font-size: 14px;
     font-family: $font-narrow;
     @include breakpoint($smartphone_wide) {
+      font-size: 16px;
+    }
+    @include breakpoint($tablet_narrow) {
+      font-size: 18px;
+      width: auto;
       padding: 10px 20px;
-      font-family: $font-normal;
     }
     &.lt-active {
       background-color: $turquois;

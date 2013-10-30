@@ -1,6 +1,25 @@
 /* IE8 */
 
-// Hide the white background bubble
+// Hide the white background bubble animation in the frontpage turquoise section
 #bubble-white {
 	display: none;
+}
+
+// Mobile nav for IE8 (like this will ever be seen)
+#mobile-menu {
+	background-image: url(../images/mobile-nav.png);
+}
+
+// Lower res heading for IE8
+#heading h1 a {
+	font-size: 40px;
+	margin: 0 0 0 10px;
+	text-indent: 0;
+	background-image: none;
+	width: auto;
+	height: auto;
+	display: inline;
+	&:after {
+	  content: ""!important;
+	}
 }

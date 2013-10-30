@@ -2,3 +2,20 @@
 #bubble-white {
   display: none;
 }
+
+#mobile-menu {
+  background-image: url(../images/mobile-nav.png);
+}
+
+#heading h1 a {
+  font-size: 40px;
+  margin: 0 0 0 10px;
+  text-indent: 0;
+  background-image: none;
+  width: auto;
+  height: auto;
+  display: inline;
+}
+#heading h1 a:after {
+  content: "" !important;
+}
