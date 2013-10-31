@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -411,7 +411,7 @@
   -moz-animation-timing-function: linear;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -488,7 +488,7 @@ li {
   font-size: 18px;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -576,7 +576,7 @@ input[type="submit"] {
   color: white;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -647,7 +647,7 @@ input[type="submit"] {
   }
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -838,7 +838,7 @@ input[type="submit"] {
   margin: 5px;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -849,31 +849,46 @@ input[type="submit"] {
    ========================================================================== */
 #hero {
   margin-top: 100px;
+  background-image: url(../images/auditorium_blur.jpg);
+  background-size: cover;
+  position: relative;
 }
 #hero .content {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 95%;
+  margin: 40px auto;
 }
-@media (min-width: 1200px) {
+@media (min-width: 700px) {
   #hero .content {
-    height: 0;
-    padding-bottom: 45%;
+    width: 90%;
+    padding: 20px;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 900px) {
   #hero .content {
-    padding-bottom: 38%;
+    margin: 40px 0;
+    width: 60%;
+    float: right;
   }
 }
 #hero h1 {
-  line-height: 1;
-  font-size: 65px;
-  margin-top: 20px;
-  -webkit-text-stroke: 1px #0e73af;
+  line-height: 1.2;
+  display: inline-block;
+  font-size: 55px;
+  color: white;
+  border-bottom: solid 1px white;
+  -webkit-text-stroke: 1px white;
+}
+@media (min-width: 470px) {
+  #hero h1 {
+    font-size: 65px;
+  }
 }
 @media (min-width: 900px) {
   #hero h1 {
-    margin-top: 100px;
     font-size: 55px;
   }
 }
@@ -889,13 +904,18 @@ input[type="submit"] {
   }
 }
 #hero h2 {
-  font-size: 24px;
-  color: #666;
+  font-size: 30px;
+  margin: 0;
+  line-height: 1.5;
+  color: #fcb040;
 }
 @media (min-width: 1700px) {
   #hero h2 {
     font-size: 40px;
   }
+}
+#hero p {
+  margin: 10px;
 }
 @media (min-width: 1700px) {
   #hero p {
@@ -915,7 +935,7 @@ input[type="submit"] {
 
 .icon {
   position: relative;
-  color: #bbb;
+  color: #fff;
   display: inline-block;
   text-decoration: none;
   font-size: 50px;
@@ -963,14 +983,14 @@ input[type="submit"] {
 @media (min-width: 900px) {
   #logo-container {
     float: left;
-    width: 50%;
-    margin: 40px 0 40px -100px;
+    width: 40%;
+    margin: 80px 0 40px -100px;
     padding-right: 0;
   }
 }
 @media (min-width: 1700px) {
   #logo-container {
-    margin-top: 100px;
+    margin-top: 140px;
   }
 }
 
@@ -1025,17 +1045,6 @@ input[type="submit"] {
 #images h1 {
   margin-top: 50px;
   color: white;
-}
-#images:before {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -40px;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 40px solid white;
 }
 
 #bubble-white {
@@ -1186,7 +1195,7 @@ input[type="submit"] {
   color: #998100;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
