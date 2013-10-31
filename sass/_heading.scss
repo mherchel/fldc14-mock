@@ -20,7 +20,6 @@
       line-height: 60px;
     }
   }
-
   h1 {
     float: left;
     line-height: 100px;
@@ -71,6 +70,7 @@
       }      
       &:hover {
         color: lighten($orange, 10%);
+        background: transparent;
       }
       &.scrolldown {
         width: 90px;
@@ -150,6 +150,7 @@
   a {
     &:hover {
       color: #333;
+      background-color: darken($turquois, 3%);
     }
   }
 }

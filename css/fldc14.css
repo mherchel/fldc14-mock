@@ -422,6 +422,7 @@
 
 body {
   font-family: helvetica, arial, sans-serif;
+  background-color: black;
   line-height: 1.7;
   color: #666;
   margin: 0;
@@ -744,6 +745,7 @@ input[type="submit"] {
 }
 #heading h1 a:hover {
   color: #fdc572;
+  background: transparent;
 }
 #heading h1 a.scrolldown {
   width: 90px;
@@ -834,6 +836,7 @@ input[type="submit"] {
 }
 #login-header a:hover {
   color: #333;
+  background-color: #4abebe;
 }
 
 #mobile-menu {
@@ -1172,6 +1175,9 @@ input[type="submit"] {
 /* =============================================================================
     Sponsors
    ========================================================================== */
+#sponsors {
+  background-color: white;
+}
 #sponsors ul {
   padding: 0;
   margin: 0 0 40px 0;
