@@ -140,34 +140,54 @@
 // Background Animation for turquois section
 
 @keyframes bubblewhite {
-  0% {left: 70%; bottom: -600px;} 
-  33% {left: 65%; bottom: -900px;}
-  66% {left: 70%; bottom: 510px;}
-  100% { left: 75%; bottom: 650px;}
+  0% { background-position: 110% 600px;} 
+  33% { background-position: 115% 200px;}
+  66% { background-position: 110% -200px;}
+  100% { background-position: 105% -600px;}
 }
 
 @-webkit-keyframes bubblewhite {
-  0% {left: 70%; bottom: -600px;} 
-  33% {left: 65%; bottom: -900px;}
-  66% {left: 70%; bottom: 510px;}
-  100% { left: 75%; bottom: 650px;}
+  0% { background-position: 110% 600px;} 
+  33% { background-position: 115% 200px;}
+  66% { background-position: 110% -200px;}
+  100% { background-position: 105% -600px;}
 }
 
 @-moz-keyframes bubblewhite {
-  0% {left: 70%; bottom: -600px;} 
-  33% {left: 65%; bottom: -900px;}
-  66% {left: 70%; bottom: 510px;}
-  100% { left: 75%; bottom: 650px;}
+  0% { background-position: 110% 600px;} 
+  33% { background-position: 115% 200px;}
+  66% { background-position: 110% -200px;}
+  100% { background-position: 105% -600px;}
 }
 
-.cssanimations #bubble-white { 
-  display: block;
-  position: absolute;
+
+// .cssanimations #bubble-white { 
+//   display: block;
+//   position: absolute;
+//   -webkit-transform: translateZ(0);
+//   -webkit-animation:bubblewhite 25s linear 0 infinite;
+//   animation:bubblewhite 25s linear 0 infinite;
+//   -moz-animation-name: bubblewhite;  /* Firefox does not like shorthand */
+//   -moz-animation-duration: 25s;
+//   -moz-animation-iteration-count: infinite;
+//   -moz-animation-timing-function: linear;
+// }
+
+
+#bubble-white {
+  display: none;
+}
+.cssanimations #images {
+  background-image: url(../images/white-bubble.svg);
+  background-repeat: no-repeat;
+  background-position: 110% 600px;
+  background-size: 600px;
   -webkit-transform: translateZ(0);
-  -webkit-animation:bubblewhite 25s linear 0 infinite;
-  animation:bubblewhite 25s linear 0 infinite;
+  -webkit-animation:bubblewhite 20s linear 0 infinite;
+  animation:bubblewhite 20s linear 0 infinite;  
   -moz-animation-name: bubblewhite;  /* Firefox does not like shorthand */
-  -moz-animation-duration: 25s;
+  -moz-animation-duration: 20s;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;  
+
 }

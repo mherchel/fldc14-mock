@@ -13,6 +13,8 @@ button {
   cursor: pointer;
   background-color: $orange;
   color: white;  
+  -webkit-appearance:none;
+  @include border-radius(3px);
   @include transition(all .2s);
   &:hover {
     background-color: darken($orange, 5%);
@@ -28,6 +30,7 @@ textarea {
   background-color: #ddd;
   font-size: 18px;
   max-width: 100%;
+  -webkit-appearance:none;
 }
 
 label {
