@@ -11,18 +11,18 @@
   0% {right: 30%; bottom: 60px; width: 40px;} 
   20% {right: 35%; bottom: 160px; width: 56px;}
   40% {right: 30%; bottom: 250px; width: 67px;}
-  60% {right: 25%; bottom: 380px; width: 85px;}
-  80% {right: 30%; bottom: 490px; width: 90px;}
-  100% { right: 35%; bottom: 600px; width: 110px;}
+  60% {right: 25%; bottom: 390px; width: 85px;}
+  80% {right: 30%; bottom: 510px; width: 90px;}
+  100% { right: 35%; bottom: 650px; width: 110px;}
 }
 
 @keyframes bubblerise2 {
   0% {right: 30%; bottom: 60px; width: 40px;} 
   20% {right: 25%; bottom: 160px; width: 56px;}
   40% {right: 30%; bottom: 250px; width: 67px;}
-  60% {right: 35%; bottom: 380px; width: 85px;}
-  80% {right: 30%; bottom: 490px; width: 90px;}
-  100% { right: 25%; bottom: 600px; width: 110px;}
+  60% {right: 35%; bottom: 390px; width: 85px;}
+  80% {right: 30%; bottom: 510px; width: 90px;}
+  100% { right: 25%; bottom: 650px; width: 110px;}
 }
 
 /* Webkit */
@@ -30,18 +30,18 @@
   0% {right: 30%; bottom: 60px; width: 40px;} 
   20% {right: 35%; bottom: 160px; width: 56px;}
   40% {right: 30%; bottom: 250px; width: 67px;}
-  60% {right: 25%; bottom: 380px; width: 85px;}
-  80% {right: 30%; bottom: 490px; width: 90px;}
-  100% { right: 35%; bottom: 600px; width: 110px;}
+  60% {right: 25%; bottom: 390px; width: 85px;}
+  80% {right: 30%; bottom: 510px; width: 90px;}
+  100% { right: 35%; bottom: 650px; width: 110px;}
 }
 
 @-webkit-keyframes bubblerise2 {
   0% {right: 30%; bottom: 60px; width: 40px;} 
   20% {right: 25%; bottom: 160px; width: 56px;}
   40% {right: 30%; bottom: 250px; width: 67px;}
-  60% {right: 35%; bottom: 380px; width: 85px;}
-  80% {right: 30%; bottom: 490px; width: 90px;}
-  100% { right: 25%; bottom: 600px; width: 110px;}
+  60% {right: 35%; bottom: 390px; width: 85px;}
+  80% {right: 30%; bottom: 510px; width: 90px;}
+  100% { right: 25%; bottom: 650px; width: 110px;}
 }
 
 /* mozilla */
@@ -49,9 +49,9 @@
   0% {right: 30%; bottom: 60px; width: 40px;} 
   20% {right: 35%; bottom: 160px; width: 56px;}
   40% {right: 30%; bottom: 250px; width: 67px;}
-  60% {right: 25%; bottom: 380px; width: 85px;}
-  80% {right: 30%; bottom: 490px; width: 90px;}
-  100% { right: 35%; bottom: 600px; width: 110px;}
+  60% {right: 25%; bottom: 390px; width: 85px;}
+  80% {right: 30%; bottom: 510px; width: 90px;}
+  100% { right: 35%; bottom: 650px; width: 110px;}
 }
 
 
@@ -59,9 +59,9 @@
   0% {right: 30%; bottom: 60px; width: 40px;} 
   20% {right: 25%; bottom: 160px; width: 56px;}
   40% {right: 30%; bottom: 250px; width: 67px;}
-  60% {right: 35%; bottom: 380px; width: 85px;}
-  80% {right: 30%; bottom: 490px; width: 90px;}
-  100% { right: 25%; bottom: 600px; width: 110px;}
+  60% {right: 35%; bottom: 390px; width: 85px;}
+  80% {right: 30%; bottom: 510px; width: 90px;}
+  100% { right: 25%; bottom: 650px; width: 110px;}
 }
 
 
@@ -141,23 +141,23 @@
 
 @keyframes bubblewhite {
   0% {left: 70%; bottom: -600px;} 
-  33% {left: 65%; bottom: -200px;}
-  66% {left: 70%; bottom: 200px;}
-  100% { left: 75%; bottom: 600px;}
+  33% {left: 65%; bottom: -900px;}
+  66% {left: 70%; bottom: 510px;}
+  100% { left: 75%; bottom: 650px;}
 }
 
 @-webkit-keyframes bubblewhite {
   0% {left: 70%; bottom: -600px;} 
-  33% {left: 65%; bottom: -200px;}
-  66% {left: 70%; bottom: 200px;}
-  100% { left: 75%; bottom: 600px;}
+  33% {left: 65%; bottom: -900px;}
+  66% {left: 70%; bottom: 510px;}
+  100% { left: 75%; bottom: 650px;}
 }
 
 @-moz-keyframes bubblewhite {
   0% {left: 70%; bottom: -600px;} 
-  33% {left: 65%; bottom: -200px;}
-  66% {left: 70%; bottom: 200px;}
-  100% { left: 75%; bottom: 600px;}
+  33% {left: 65%; bottom: -900px;}
+  66% {left: 70%; bottom: 510px;}
+  100% { left: 75%; bottom: 650px;}
 }
 
 .cssanimations #bubble-white { 

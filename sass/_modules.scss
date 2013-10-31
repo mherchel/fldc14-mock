@@ -10,7 +10,7 @@
   background-image: url(../images/auditorium_blur.jpg);
   background-size: cover;
   position: relative;
-  // padding-bottom: 60px;
+  padding-bottom: 20px;
   .content {
     text-align: center;
     padding: 10px;
@@ -27,6 +27,12 @@
       margin: 40px 0;
       width: 60%;
       float: right;
+    }
+    @include breakpoint($normal) {
+      margin: 80px 0;
+    }
+    @include breakpoint($wide) {
+      margin: 120px 0;
     }
   }
   h1 {
@@ -50,7 +56,6 @@
     }    
     @include breakpoint($wide) {
       font-size: 70px;
-      margin-top: 200px;
     }
   }
   h2 {
@@ -79,6 +84,19 @@
     line-height: 90px;
     margin: 10px 0 20px 0;
   }
+  &:before {
+    content: "";
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -40px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid $turquois;
+  }
+
   // &:before {
   //   content: "";
   //   position: absolute;
@@ -139,10 +157,6 @@
   content: "\e005";
 }
 
-
-
-
-
 #logo-container {
   @extend %clearfix;
   position: relative;
@@ -159,8 +173,11 @@
     margin: 80px 0 40px -100px;
     padding-right: 0;
   }
+  @include breakpoint($normal) {
+    margin-top: 100px;
+  }
   @include breakpoint($wide) {
-    margin-top: 140px;
+    margin-top: 100px;
   }
 
 }

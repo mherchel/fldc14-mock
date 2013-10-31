@@ -49,19 +49,19 @@
 
   60% {
     right: 25%;
-    bottom: 380px;
+    bottom: 390px;
     width: 85px;
   }
 
   80% {
     right: 30%;
-    bottom: 490px;
+    bottom: 510px;
     width: 90px;
   }
 
   100% {
     right: 35%;
-    bottom: 600px;
+    bottom: 650px;
     width: 110px;
   }
 }
@@ -87,19 +87,19 @@
 
   60% {
     right: 35%;
-    bottom: 380px;
+    bottom: 390px;
     width: 85px;
   }
 
   80% {
     right: 30%;
-    bottom: 490px;
+    bottom: 510px;
     width: 90px;
   }
 
   100% {
     right: 25%;
-    bottom: 600px;
+    bottom: 650px;
     width: 110px;
   }
 }
@@ -126,19 +126,19 @@
 
   60% {
     right: 25%;
-    bottom: 380px;
+    bottom: 390px;
     width: 85px;
   }
 
   80% {
     right: 30%;
-    bottom: 490px;
+    bottom: 510px;
     width: 90px;
   }
 
   100% {
     right: 35%;
-    bottom: 600px;
+    bottom: 650px;
     width: 110px;
   }
 }
@@ -164,19 +164,19 @@
 
   60% {
     right: 35%;
-    bottom: 380px;
+    bottom: 390px;
     width: 85px;
   }
 
   80% {
     right: 30%;
-    bottom: 490px;
+    bottom: 510px;
     width: 90px;
   }
 
   100% {
     right: 25%;
-    bottom: 600px;
+    bottom: 650px;
     width: 110px;
   }
 }
@@ -203,19 +203,19 @@
 
   60% {
     right: 25%;
-    bottom: 380px;
+    bottom: 390px;
     width: 85px;
   }
 
   80% {
     right: 30%;
-    bottom: 490px;
+    bottom: 510px;
     width: 90px;
   }
 
   100% {
     right: 35%;
-    bottom: 600px;
+    bottom: 650px;
     width: 110px;
   }
 }
@@ -241,19 +241,19 @@
 
   60% {
     right: 35%;
-    bottom: 380px;
+    bottom: 390px;
     width: 85px;
   }
 
   80% {
     right: 30%;
-    bottom: 490px;
+    bottom: 510px;
     width: 90px;
   }
 
   100% {
     right: 25%;
-    bottom: 600px;
+    bottom: 650px;
     width: 110px;
   }
 }
@@ -340,17 +340,17 @@
 
   33% {
     left: 65%;
-    bottom: -200px;
+    bottom: -900px;
   }
 
   66% {
     left: 70%;
-    bottom: 200px;
+    bottom: 510px;
   }
 
   100% {
     left: 75%;
-    bottom: 600px;
+    bottom: 650px;
   }
 }
 
@@ -362,17 +362,17 @@
 
   33% {
     left: 65%;
-    bottom: -200px;
+    bottom: -900px;
   }
 
   66% {
     left: 70%;
-    bottom: 200px;
+    bottom: 510px;
   }
 
   100% {
     left: 75%;
-    bottom: 600px;
+    bottom: 650px;
   }
 }
 
@@ -384,17 +384,17 @@
 
   33% {
     left: 65%;
-    bottom: -200px;
+    bottom: -900px;
   }
 
   66% {
     left: 70%;
-    bottom: 200px;
+    bottom: 510px;
   }
 
   100% {
     left: 75%;
-    bottom: 600px;
+    bottom: 650px;
   }
 }
 
@@ -663,6 +663,9 @@ input[type="submit"] {
   top: 0;
   width: 100%;
   height: 100px;
+  -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
@@ -733,6 +736,11 @@ input[type="submit"] {
     margin: 0;
   }
 }
+@media (min-width: 1200px) {
+  #heading h1 a {
+    font-size: 55px;
+  }
+}
 #heading h1 a:hover {
   color: #fdc572;
 }
@@ -769,9 +777,19 @@ input[type="submit"] {
   display: inline-block;
   font-size: 20px;
 }
+@media (min-width: 900px) {
+  #heading li:last-child a {
+    padding-right: 20px;
+  }
+}
 @media (min-width: 950px) {
   #heading li {
     font-size: 25px;
+  }
+}
+@media (min-width: 1700px) {
+  #heading li {
+    font-size: 35px;
   }
 }
 #heading a {
@@ -785,7 +803,8 @@ input[type="submit"] {
   transition: all 0.2s;
 }
 #heading a:hover {
-  color: #e4d400;
+  color: #333;
+  background-color: #fcb040;
 }
 
 #login-header {
@@ -793,7 +812,6 @@ input[type="submit"] {
   line-height: 100px;
   font-size: 20px;
   display: block;
-  margin-left: 10px;
   background-color: #55c2c2;
   -webkit-transition: all, 0.1s;
   -moz-transition: all, 0.1s;
@@ -803,6 +821,11 @@ input[type="submit"] {
 @media (min-width: 950px) {
   #login-header {
     font-size: 25px;
+  }
+}
+@media (min-width: 1700px) {
+  #login-header {
+    font-size: 35px;
   }
 }
 #login-header.scrolldown {
@@ -852,6 +875,7 @@ input[type="submit"] {
   background-image: url(../images/auditorium_blur.jpg);
   background-size: cover;
   position: relative;
+  padding-bottom: 20px;
 }
 #hero .content {
   text-align: center;
@@ -872,6 +896,16 @@ input[type="submit"] {
     margin: 40px 0;
     width: 60%;
     float: right;
+  }
+}
+@media (min-width: 1200px) {
+  #hero .content {
+    margin: 80px 0;
+  }
+}
+@media (min-width: 1700px) {
+  #hero .content {
+    margin: 120px 0;
   }
 }
 #hero h1 {
@@ -900,7 +934,6 @@ input[type="submit"] {
 @media (min-width: 1700px) {
   #hero h1 {
     font-size: 70px;
-    margin-top: 200px;
   }
 }
 #hero h2 {
@@ -931,6 +964,18 @@ input[type="submit"] {
   text-align: center;
   line-height: 90px;
   margin: 10px 0 20px 0;
+}
+#hero:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -40px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid #55c2c2;
 }
 
 .icon {
@@ -988,9 +1033,14 @@ input[type="submit"] {
     padding-right: 0;
   }
 }
+@media (min-width: 1200px) {
+  #logo-container {
+    margin-top: 100px;
+  }
+}
 @media (min-width: 1700px) {
   #logo-container {
-    margin-top: 140px;
+    margin-top: 100px;
   }
 }
 
