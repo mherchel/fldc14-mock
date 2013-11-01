@@ -349,18 +349,18 @@
     img {
       max-width: 90%;
     }
-    &:hover:after {
-      content: "@todo - put in a cool hover effect";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      width: 100%;
-      background-color: $turquois;
-      color: white;
-      font-weight: bold;
-    }
+    // &:hover:after {
+    //   content: "@todo - put in a cool hover effect";
+    //   display: block;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   text-align: center;
+    //   width: 100%;
+    //   background-color: $turquois;
+    //   color: white;
+    //   font-weight: bold;
+    // }
   }
   .sponsor-platinum li {
     width: 80%;
@@ -407,6 +407,9 @@
   }
   .sponsor-bronze {
     color: darken(gold, 20%);
+  }
+  a {
+    background-color: transparent;
   }
   // /#Sponsors
 }

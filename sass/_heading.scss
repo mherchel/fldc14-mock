@@ -79,54 +79,7 @@
     }
   }
 
-  nav {
-    display: none;
-    float: right;
-    font-family: $font-heading;
-    text-transform: uppercase;
-    line-height: 100px;
-    @include transition(all .1s);
-    @include breakpoint($tablet_wide) {
-      display: block;
-    }     
-    > ul {
-      float: left;
-      margin: 0;
-      padding: 0;
-      ul {
-        display: none;
-        // @todo get submenus working
-      }
-    }
-  }
-  li {
-    margin: 0;
-    display: inline-block;
-    font-size: 20px;
-    @include breakpoint($tablet_wide) {
-      &:last-child a {
-        padding-right: 20px;
-      }
-    }        
-    @include breakpoint($tablet_wide_1) {
-      font-size: 25px;
-    }    
-    @include breakpoint($wide) {
-      font-size: 35px;
-    }        
-  }
-  a {
-    padding: 0 10px;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    @include transition(all .2s);
-    &:hover {
-      color: #333;
-      background-color: $orange;
-    }  
-
-  }  
+ 
 
   // /#heading
 }
@@ -150,7 +103,7 @@
   a {
     &:hover {
       color: #333;
-      background-color: darken($turquois, 3%);
+      background-color: transparent;
     }
   }
 }

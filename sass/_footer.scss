@@ -56,11 +56,19 @@
  		padding: 0;
  		list-style: none;
  		font-family: $font-heading;
+ 		display: block;
  		a {
  			font-size: 32px;
+ 			color: $orange;
+ 			&:hover {
+ 				color: darken($orange, 10%);
+ 			}
  		}
  		li {
  			font-family: $font-normal;
+ 			margin: 0;
+ 			line-height: 1.4;
+ 			display: block;
  			a {
  				color: white;
  				font-size: 22px;
