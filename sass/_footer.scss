@@ -14,7 +14,15 @@
  		@include breakpoint($tablet_narrow) {
  			float: left;
  			padding: 0 20px;
+ 			width: 70%;
+ 			text-align: left;
  		}
+ 		@include breakpoint($tablet_wide) {
+ 			width: 100%;
+ 		} 		
+ 		@include breakpoint($normal) {
+ 			width: auto;
+ 		} 		
  		a {
  			color: #fff;
  		}

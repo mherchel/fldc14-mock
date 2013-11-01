@@ -13,10 +13,12 @@
 
 body {
   font-family: $font-normal;
-  background-color: black;
   line-height: 1.7;
   color: #666;
   margin: 0;
+  &.front{
+    background-color: black;
+  }
 }
 
 img {

@@ -422,10 +422,12 @@
 
 body {
   font-family: helvetica, arial, sans-serif;
-  background-color: black;
   line-height: 1.7;
   color: #666;
   margin: 0;
+}
+body.front {
+  background-color: black;
 }
 
 img {
@@ -1033,13 +1035,14 @@ input[type="submit"] {
 @media (min-width: 900px) {
   #logo-container {
     float: left;
-    width: 40%;
-    margin: 80px 0 40px -100px;
+    width: 42%;
+    margin: 80px 0 40px -50px;
     padding-right: 0;
   }
 }
 @media (min-width: 1200px) {
   #logo-container {
+    width: 40%;
     margin-top: 100px;
   }
 }
@@ -1275,6 +1278,18 @@ input[type="submit"] {
   #footer .content {
     float: left;
     padding: 0 20px;
+    width: 70%;
+    text-align: left;
+  }
+}
+@media (min-width: 900px) {
+  #footer .content {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #footer .content {
+    width: auto;
   }
 }
 #footer .content a {
