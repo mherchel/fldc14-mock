@@ -8,10 +8,12 @@
 #hero {
   margin-top: 100px;
   background-image: url(../images/auditorium_blur.jpg);
-  background-attachment: fixed; // Because why the hell not?
   background-size: cover;
   position: relative;
   padding-bottom: 20px;
+  @include breakpoint($normal) {
+    background-attachment: fixed; // Because why the hell not?
+  }
   .content {
     text-align: center;
     padding: 10px;
@@ -245,35 +247,36 @@
     margin-top: 50px;
     color: white;
   }
-  // &:before {
-  //   content: "";
-  //   width: 0; 
-  //   height: 0; 
-  //   position: absolute;
-  //   left: 50%;
-  //   margin-left: -40px;
-  //   border-left: 40px solid transparent;
-  //   border-right: 40px solid transparent;
-  //   border-top: 40px solid white;
-  // }
-  // /#images
 }
 
-#bubble-white {
-  position: absolute;
-  bottom: 200px;
-  width: 45%;
-  height: auto;
-  left: 80%;
-}
+
 
 /* =============================================================================
     Location Map
    ========================================================================== */
 
 #location {
-  background-image: url(../images/map-background.jpg);
   background-position: center center;
+  height: 575px;
+  position: relative;
+  @include breakpoint(0px $smartphone_wide) {
+    background-image: url(../images/map-background_smartphone_narrow.jpg);
+  }  
+  @include breakpoint($smartphone_wide $tablet_narrow) {
+    background-image: url(../images/map-background_smartphone_wide.jpg);
+  }
+  @include breakpoint($tablet_narrow $tablet_wide) {
+    background-image: url(../images/map-background_tablet_narrow.jpg);
+  }
+  @include breakpoint($tablet_wide $normal) {
+    background-image: url(../images/map-background_tablet_wide.jpg);
+  }
+  @include breakpoint($normal $wide) {
+    background-image: url(../images/map-background_normal.jpg);
+  }
+  @include breakpoint($wide) {
+    background-image: url(../images/map-background_wide.jpg);
+  }  
   &:before {
     content: "";
     width: 0; 
@@ -287,10 +290,21 @@
   }
 }
 
+#map-link {
+  position: absolute;
+  text-indent: -9999px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 #location-info {
   margin: 50px auto;
   padding: 20px 30px;
   width: 95%;
+  z-index: 5;
+  position: relative;
   @extend %clearfix;
   background-color: $blue;
   color: white;
@@ -300,8 +314,23 @@
   @include breakpoint($tablet_narrow) {
     max-width: 350px;
     margin: 75px 20px;
-    float: right;
+    left: calc(20% + 80px);
+      &:before {
+      content: "";
+      width: 0; 
+      height: 0; 
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      margin-top: -60px;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-right: 60px solid $blue;
+    }  
   }
+  @include breakpoint($tablet_wide) {
+    left: calc(50% + 80px);
+  }  
   h1 {
     color: $yellow;
     margin: 0;
@@ -327,6 +356,29 @@
   }
 }
 
+#location-img {
+  display: none;
+  @include breakpoint($tablet-narrow) {
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    width: 75px;
+    height: 75px;
+    margin-left: -38px;
+    margin-top: -60px;
+  }
+  @include breakpoint($tablet-wide) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 75px;
+    height: 75px;
+    margin-left: -38px;
+    margin-top: -60px;
+  }  
+}
 
 /* =============================================================================
     Sponsors
