@@ -257,7 +257,6 @@
 
 #location {
   background-position: center center;
-  height: 575px;
   position: relative;
   @include breakpoint(0px $smartphone_wide) {
     background-image: url(../images/map-background_smartphone_narrow.jpg);

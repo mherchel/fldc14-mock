@@ -1135,7 +1135,6 @@ input[type="submit"] {
    ========================================================================== */
 #location {
   background-position: center center;
-  height: 575px;
   position: relative;
 }
 @media (min-width: 0px) and (max-width: 470px) {
