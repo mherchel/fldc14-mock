@@ -31,13 +31,18 @@
   a {
     padding: 0 10px;
     color: white;
+    background-color: black;
     text-decoration: none;
-    display: inline-block;
-    @include transition(all .2s);
+    display: block;
+    z-index: 10;
+    position: relative;    
+    @include transition(color .2s);
+    @include transition(background-color .2s);
   }   
   li {
     margin: 0;
-    display: inline-block;
+    display: block;
+    float: left;
     font-size: 20px;
     position: relative;
     @include breakpoint($tablet_wide) {
@@ -56,39 +61,49 @@
       color: #333;
     }
 
-    // Submenu Structure
-  
-  &:hover > ul {
-    display: block;
-  }    
+  // Submenu Structure for desktop
+    @include breakpoint($tablet_wide) {
+      &:hover > ul {
+        display: block;
+        top: 100%;
+      }    
 
-  > ul {
-    display: none;
-    padding: 0;
-    position: absolute;
-    top: 100%;
-    left: -1px; // to compensate for the border below
-    width: 180px;
-    background-color: $orange;
-    border: solid 1px #333;
-    border-top: 0;
-    > li {
-      display: block;
-      line-height: 2;
-      text-align: left;
-    }     
-    a {
-      background-color: $orange;
-      color: #333;
-      padding: 0 10px;
-      display: block;
-      &:hover {
-        color: white!important;
+      > ul {
+        padding: 0;
+        position: absolute;
+        top: -400px;
+        left: -1px; // to compensate for the border below
+        width: 180px;
+        background-color: $orange;
+        border: solid 1px #333;
+        border-top: 0;
+        z-index: 5;
+        @include breakpoint($wide) {
+          top: -500px; // 400px just doesn't do it for wide breakpoints
+        }
+        @include transition(all .2s); // Speed of the dropdown
+        > li {
+          display: block;
+          float: none;
+          line-height: 2;
+          text-align: left;
+        }     
+        a {
+          background-color: $orange;
+          color: #333;
+          padding: 0 10px;
+          display: block;    
+          z-index: 5; // Necessary so they don't inherit parent style
+          &:hover {
+            color: white!important;
+          }
+        }  
+      // /ul     
       }
-    }       
+    // /tablet-wide breakpoint 
+    }
+  // /li
   }
-}
- 
 // /#primary-menu     
 }
     
@@ -129,6 +144,8 @@
   font-size: 20px;
   display: block;
   background-color: $turquois;
+  position: relative; // Necessary so slidedown dropdown menus don't momentarily appear over 
+  z-index: 10; // Necessary so slidedown dropdown menus don't momentarily appear over 
   @include transition(all, 0.1s);
   @include breakpoint($tablet_wide_1) {
     font-size: 25px;
@@ -142,6 +159,8 @@
   a {
     padding: 0 10px;
     color: white;
+    display: block;
+    float: left;
     &:hover {
       color: #333;
       background-color: transparent;
