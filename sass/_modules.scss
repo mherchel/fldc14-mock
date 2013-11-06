@@ -68,7 +68,7 @@
     color: $orange;
     @include breakpoint($wide) {
       font-size: 40px;
-    }    
+    } 
   }
   p {
     margin: 10px;
@@ -99,27 +99,23 @@
     border-right: 40px solid transparent;
     border-bottom: 40px solid $turquois;
   }
-
-  // &:before {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: -5%;
-  //   width: 54%;
-  //   background-color: $turquois;
-  //   height: 50px;
-  //   -webkit-transform: skew(45deg);
-  // }
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   right: -5%;
-  //   width: 54%;
-  //   background-color: $turquois;
-  //   height: 50px;
-  //   -webkit-transform: skew(315deg);
-  // }  
+  .date {
+    display: block;
+    font-size: 35px;
+    @include breakpoint($smartphone_wide) {
+      display: inline;
+      font-size: 30px;
+      &:after {
+        content: " | "
+      }
+    }
+  }
+  .loc {
+    display: block;
+    @include breakpoint($smartphone_wide) {
+      display: inline;
+    }
+  } 
   // /#hero
 }
 
@@ -352,6 +348,21 @@
     color: white;
     margin: 0;
     text-align: left;    
+  }
+  .addr {
+    display: block;
+    @include breakpoint($smartphone_wide) {
+      display: inline;
+      &:after {
+        content: ", ";
+      }
+    }
+  }
+  .city {
+    display: block;
+    @include breakpoint($smartphone_wide) {
+      display: inline;
+    }
   }
 }
 

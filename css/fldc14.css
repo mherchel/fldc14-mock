@@ -1009,6 +1009,27 @@ input[type="submit"] {
   border-right: 40px solid transparent;
   border-bottom: 40px solid #55c2c2;
 }
+#hero .date {
+  display: block;
+  font-size: 35px;
+}
+@media (min-width: 470px) {
+  #hero .date {
+    display: inline;
+    font-size: 30px;
+  }
+  #hero .date:after {
+    content: " | ";
+  }
+}
+#hero .loc {
+  display: block;
+}
+@media (min-width: 470px) {
+  #hero .loc {
+    display: inline;
+  }
+}
 
 .icon {
   position: relative;
@@ -1248,6 +1269,25 @@ input[type="submit"] {
   color: white;
   margin: 0;
   text-align: left;
+}
+#location-info .addr {
+  display: block;
+}
+@media (min-width: 470px) {
+  #location-info .addr {
+    display: inline;
+  }
+  #location-info .addr:after {
+    content: ", ";
+  }
+}
+#location-info .city {
+  display: block;
+}
+@media (min-width: 470px) {
+  #location-info .city {
+    display: inline;
+  }
 }
 
 #location-img {
