@@ -762,35 +762,107 @@ input[type="submit"] {
   height: 80px;
 }
 
-#login-header {
+#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/* =============================================================================
+    Header Navigation
+   ========================================================================== */
+.header-menu {
+  display: none;
   float: right;
+  font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
+  text-transform: uppercase;
   line-height: 100px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+@media (min-width: 900px) {
+  .header-menu {
+    display: block;
+  }
+}
+
+/* =============================================================================
+    Primary navigation
+   ========================================================================== */
+#primary-menu {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#primary-menu a {
+  padding: 0 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#primary-menu li {
+  margin: 0;
+  display: inline-block;
   font-size: 20px;
-  display: block;
-  background-color: #55c2c2;
-  -webkit-transition: all, 0.1s;
-  -moz-transition: all, 0.1s;
-  -o-transition: all, 0.1s;
-  transition: all, 0.1s;
+  position: relative;
+}
+@media (min-width: 900px) {
+  #primary-menu li:last-child > a {
+    padding-right: 20px !important;
+  }
 }
 @media (min-width: 950px) {
-  #login-header {
+  #primary-menu li {
     font-size: 25px;
   }
 }
 @media (min-width: 1700px) {
-  #login-header {
+  #primary-menu li {
     font-size: 35px;
   }
 }
-#login-header.scrolldown {
-  line-height: 60px;
-}
-#login-header a:hover {
+#primary-menu li:hover a {
+  background-color: #fcb040;
   color: #333;
-  background-color: transparent;
+}
+#primary-menu li:hover > ul {
+  display: block;
+}
+#primary-menu li > ul {
+  display: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 180px;
+  background-color: #fcb040;
+  border: solid 1px #333;
+  border-top: 0;
+}
+#primary-menu li > ul > li {
+  display: block;
+  line-height: 2;
+  text-align: left;
+}
+#primary-menu li > ul a {
+  background-color: #fcb040;
+  color: #333;
+  padding: 0 10px;
+  display: block;
+}
+#primary-menu li > ul a:hover {
+  color: white !important;
 }
 
+/* =============================================================================
+    Mobile Menu button
+   ========================================================================== */
 #mobile-menu {
   text-indent: -9999px;
   overflow: hidden;
@@ -817,75 +889,40 @@ input[type="submit"] {
   margin: 5px;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
-  display: table;
-  content: "";
-  clear: both;
-}
-
 /* =============================================================================
-    Header Navigation
+    Login Header
    ========================================================================== */
-.header-menu {
-  display: none;
+#login-header {
   float: right;
-  font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
-  text-transform: uppercase;
   line-height: 100px;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
-}
-@media (min-width: 900px) {
-  .header-menu {
-    display: block;
-  }
-}
-.header-menu > ul {
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-.header-menu > ul ul {
-  display: none;
-}
-.header-menu li {
-  margin: 0;
-  display: inline-block;
   font-size: 20px;
-}
-@media (min-width: 900px) {
-  .header-menu li:last-child a {
-    padding-right: 20px;
-  }
+  display: block;
+  background-color: #55c2c2;
+  -webkit-transition: all, 0.1s;
+  -moz-transition: all, 0.1s;
+  -o-transition: all, 0.1s;
+  transition: all, 0.1s;
 }
 @media (min-width: 950px) {
-  .header-menu li {
+  #login-header {
     font-size: 25px;
   }
 }
 @media (min-width: 1700px) {
-  .header-menu li {
+  #login-header {
     font-size: 35px;
   }
 }
-.header-menu li a:hover {
-  color: white;
+#login-header.scrolldown {
+  line-height: 60px;
 }
-.header-menu a {
+#login-header a {
   padding: 0 10px;
   color: white;
-  text-decoration: none;
-  display: inline-block;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
 }
-.header-menu a:hover {
+#login-header a:hover {
   color: #333;
-  background-color: #fcb040;
+  background-color: transparent;
 }
 
 #login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
