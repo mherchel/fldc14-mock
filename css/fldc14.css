@@ -671,23 +671,28 @@ input[type="submit"] {
 #heading {
   background-color: black;
   z-index: 10;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
-  height: 100px;
-  -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
 }
-#heading.scrolldown {
-  height: 60px;
-}
-#heading.scrolldown h1, #heading.scrolldown nav {
-  line-height: 60px;
+@media (min-width: 900px) {
+  #heading {
+    height: 100px;
+    position: fixed;
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+  }
+  #heading.scrolldown {
+    height: 60px;
+  }
+  #heading.scrolldown h1, #heading.scrolldown nav {
+    line-height: 60px;
+  }
 }
 #heading h1 {
   float: left;
@@ -702,14 +707,15 @@ input[type="submit"] {
   display: block;
   text-indent: -9999px;
   background-image: url(../images/drupal-diver-no-bubble.svg);
-  width: 130px;
-  height: 120px;
+  width: 90px;
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   color: #fcb040;
   margin: 5px;
   padding: 0;
   position: relative;
+  z-index: 10;
   -webkit-transition: all, 0.2s;
   -moz-transition: all, 0.2s;
   -o-transition: all, 0.2s;
@@ -755,11 +761,6 @@ input[type="submit"] {
 }
 #heading h1 a:hover {
   color: #fdc572;
-  background: transparent;
-}
-#heading h1 a.scrolldown {
-  width: 90px;
-  height: 80px;
 }
 
 #login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
@@ -773,18 +774,20 @@ input[type="submit"] {
    ========================================================================== */
 .header-menu {
   display: none;
-  float: right;
   font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
   text-transform: uppercase;
   line-height: 100px;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
+  clear: both;
 }
 @media (min-width: 900px) {
   .header-menu {
+    clear: none;
+    float: right;
     display: block;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
   }
 }
 
@@ -792,18 +795,27 @@ input[type="submit"] {
     Primary navigation
    ========================================================================== */
 #primary-menu {
-  float: left;
   margin: 0;
   padding: 0;
+  width: 100%;
+  text-align: left;
+  clear: both;
+}
+.scrolldown #primary-menu {
+  top: 60px;
+}
+@media (min-width: 900px) {
+  #primary-menu {
+    float: left;
+    width: auto;
+  }
 }
 #primary-menu a {
-  padding: 0 10px;
+  padding: 0 20px;
   color: white;
   background-color: black;
   text-decoration: none;
   display: block;
-  z-index: 10;
-  position: relative;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
@@ -813,15 +825,24 @@ input[type="submit"] {
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
+@media (min-width: 900px) {
+  #primary-menu a {
+    position: relative;
+    z-index: 10;
+    padding: 0 10px;
+  }
+}
 #primary-menu li {
   margin: 0;
   display: block;
-  float: left;
   font-size: 20px;
   position: relative;
 }
 @media (min-width: 900px) {
-  #primary-menu li:last-child > a {
+  #primary-menu li {
+    float: left;
+  }
+  #primary-menu li.faq > a {
     padding-right: 20px !important;
   }
 }
@@ -835,9 +856,24 @@ input[type="submit"] {
     font-size: 35px;
   }
 }
+#primary-menu li.header-right a {
+  background-color: #55c2c2;
+}
+#primary-menu li.header-right a:hover {
+  background-color: #55c2c2;
+}
 #primary-menu li:hover a {
   background-color: #fcb040;
   color: #333;
+}
+@media (min-width: 0) and (max-width: 900px) {
+  #primary-menu li {
+    line-height: 3;
+    font-size: 25px;
+  }
+  #primary-menu li > ul {
+    display: none;
+  }
 }
 @media (min-width: 900px) {
   #primary-menu li:hover > ul {
@@ -878,7 +914,8 @@ input[type="submit"] {
 }
 @media (min-width: 900px) and (min-width: 1700px) {
   #primary-menu li > ul {
-    top: -500px;
+    top: -600px;
+    width: 220px;
   }
 }
 
@@ -907,49 +944,6 @@ input[type="submit"] {
     display: none;
   }
 }
-#mobile-menu.scrolldown {
-  margin: 5px;
-}
-
-/* =============================================================================
-    Login Header
-   ========================================================================== */
-#login-header {
-  float: right;
-  line-height: 100px;
-  font-size: 20px;
-  display: block;
-  background-color: #55c2c2;
-  position: relative;
-  z-index: 10;
-  -webkit-transition: all, 0.1s;
-  -moz-transition: all, 0.1s;
-  -o-transition: all, 0.1s;
-  transition: all, 0.1s;
-}
-@media (min-width: 950px) {
-  #login-header {
-    font-size: 25px;
-  }
-}
-@media (min-width: 1700px) {
-  #login-header {
-    font-size: 35px;
-  }
-}
-#login-header.scrolldown {
-  line-height: 60px;
-}
-#login-header a {
-  padding: 0 10px;
-  color: white;
-  display: block;
-  float: left;
-}
-#login-header a:hover {
-  color: #333;
-  background-color: transparent;
-}
 
 #login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
@@ -961,11 +955,15 @@ input[type="submit"] {
     Hero
    ========================================================================== */
 #hero {
-  margin-top: 100px;
   background-image: url(../images/auditorium_blur.jpg);
   background-size: cover;
   position: relative;
   padding-bottom: 20px;
+}
+@media (min-width: 900px) {
+  #hero {
+    margin-top: 100px;
+  }
 }
 @media (min-width: 1200px) {
   #hero {
@@ -1487,6 +1485,7 @@ input[type="submit"] {
 @media (min-width: 1200px) {
   #footer .content {
     width: auto;
+    clear: both;
   }
 }
 #footer .content a {

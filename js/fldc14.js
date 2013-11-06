@@ -1,5 +1,7 @@
 $(document ).ready(function() {
 
+	// Resize the header on scroll
+
 	$(window).scroll(function(){
 	if($(window).scrollTop() >= $('#heading').outerHeight()) {
 		$( "#heading" ).addClass( "scrolldown" );
@@ -15,5 +17,21 @@ $(document ).ready(function() {
 		$( "#login-header" ).removeClass( "scrolldown" );
 	}	
 	});
+
+
+	// Mobile Navigation
+
+	$('#mobile-menu').click(function(){
+
+		// Show the mobile navigation
+		$('.header-menu').stop();
+		$('.header-menu').slideToggle();
+
+		// Add/remove the nav-mobile-active class
+		$('#mobile-menu').toggleClass('mobile-menu-active');
+
+	});	
+
+
 
 });

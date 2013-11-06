@@ -8,16 +8,19 @@
   background-color: black;
   @extend %clearfix;
   z-index: 10;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
-  height: 100px;
-  @include box-shadow(0 0 5px rgba(255,255,255,.3));
-  @include transition(all .1s);
-  &.scrolldown {
-    height: 60px;
-    h1, nav {
-      line-height: 60px;
+  @include breakpoint($tablet_wide) {
+    height: 100px;
+    position: fixed;
+    @include box-shadow(0 0 5px rgba(255,255,255,.3));
+    @include transition(all .1s);
+    &.scrolldown {
+      height: 60px;
+      h1, nav {
+        line-height: 60px;
+      }    
     }
   }
   h1 {
@@ -29,14 +32,15 @@
       display: block;
       text-indent: -9999px;
       background-image: url(../images/drupal-diver-no-bubble.svg);
-      width: 130px;
-      height: 120px;
+      width: 90px;
+      height: 80px;
       background-size: contain;   
       background-repeat: no-repeat;   
       color: $orange;
       margin: 5px;
       padding: 0;
       position: relative;
+      z-index: 10;
       @include transition(all, .2s);
       @include breakpoint($smartphone_wide) {
         &:after {
@@ -70,11 +74,6 @@
       }      
       &:hover {
         color: lighten($orange, 10%);
-        background: transparent;
-      }
-      &.scrolldown {
-        width: 90px;
-        height: 80px;
       }
     }
   }

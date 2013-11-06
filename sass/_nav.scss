@@ -8,16 +8,18 @@
 
 
 .header-menu {
-    display: none;
+  display: none;
+  font-family: $font-heading;
+  text-transform: uppercase;
+  line-height: 100px;
+  clear: both;
+  @include breakpoint($tablet_wide) {
+    clear: none;
     float: right;
-    font-family: $font-heading;
-    text-transform: uppercase;
-    line-height: 100px;
+    display: block;
     @include transition(all .1s);
-    @include breakpoint($tablet_wide) {
-      display: block;
-    }     
-  }
+  }     
+}
 
 
 /* =============================================================================
@@ -25,28 +27,40 @@
    ========================================================================== */
   
 #primary-menu {
-  float: left;
-  margin: 0;
+  margin: 0;  
   padding: 0;
+  width: 100%;
+  text-align: left;
+  clear: both;
+  .scrolldown & {
+    top: 60px;
+  }
+  @include breakpoint($tablet_wide) {
+    float: left;
+    width: auto;
+  }
   a {
-    padding: 0 10px;
+    padding: 0 20px;
     color: white;
     background-color: black;
     text-decoration: none;
-    display: block;
-    z-index: 10;
-    position: relative;    
+    display: block;    
     @include transition(color .2s);
     @include transition(background-color .2s);
+    @include breakpoint($tablet_wide) {
+      position: relative;   
+      z-index: 10;
+      padding: 0 10px;
+    }
   }   
   li {
     margin: 0;
     display: block;
-    float: left;
     font-size: 20px;
     position: relative;
     @include breakpoint($tablet_wide) {
-      &:last-child > a {
+      float: left;
+      &.faq > a {
         padding-right: 20px!important; // Give some extra space next to the login/register links
       }
     }        
@@ -56,12 +70,32 @@
     @include breakpoint($wide) {
       font-size: 35px;
     }
+    &.header-right {
+      a {
+        background-color: $turquois;
+        &:hover {
+          background-color: $turquois;
+        }
+      }
+    }
     &:hover a {
       background-color: $orange;
       color: #333;
     }
 
-  // Submenu Structure for desktop
+
+    // Submenu Structure for mobile
+    @include breakpoint(0 $tablet_wide) {
+      line-height: 3;
+      font-size: 25px;
+      > ul {
+        display: none;
+        > li {
+
+        }
+      }
+    }
+    // Submenu Structure for desktop
     @include breakpoint($tablet_wide) {
       &:hover > ul {
         display: block;
@@ -79,7 +113,8 @@
         border-top: 0;
         z-index: 5;
         @include breakpoint($wide) {
-          top: -500px; // 400px just doesn't do it for wide breakpoints
+          top: -600px;
+          width: 220px;
         }
         @include transition(all .2s); // Speed of the dropdown
         > li {
@@ -127,43 +162,5 @@
   @include transition(all .2s);
   @include breakpoint($tablet_wide) {
     display: none;
-  }
-  &.scrolldown {
-    margin: 5px;
-  }
-}
-
-/* =============================================================================
-    Login Header
-   ========================================================================== */
-
-
-#login-header {
-  float: right;
-  line-height: 100px;
-  font-size: 20px;
-  display: block;
-  background-color: $turquois;
-  position: relative; // Necessary so slidedown dropdown menus don't momentarily appear over 
-  z-index: 10; // Necessary so slidedown dropdown menus don't momentarily appear over 
-  @include transition(all, 0.1s);
-  @include breakpoint($tablet_wide_1) {
-    font-size: 25px;
-  }
-  @include breakpoint($wide) {
-    font-size: 35px;
-  }
-  &.scrolldown {
-    line-height: 60px;
-  }
-  a {
-    padding: 0 10px;
-    color: white;
-    display: block;
-    float: left;
-    &:hover {
-      color: #333;
-      background-color: transparent;
-    }
   }
 }
