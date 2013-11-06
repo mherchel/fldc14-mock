@@ -3,6 +3,13 @@
   background-image: url(../images/mobile-nav.png);
 }
 
+#hero {
+  background-image: url(../images/auditorium_blur_ie8.jpg);
+}
+#hero .content {
+  background-image: url(../images/ie8-fallback-transparent-black.png);
+}
+
 #heading h1 a {
   font-size: 40px;
   margin: 0 0 0 10px;
@@ -14,4 +21,13 @@
 }
 #heading h1 a:after {
   content: "" !important;
+}
+
+#location-info {
+  left: 50%;
+  margin-left: 100px !important;
+}
+
+#sponsors .sponsor-platinum li {
+  width: 30% !important;
 }

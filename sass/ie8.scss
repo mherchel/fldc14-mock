@@ -6,6 +6,16 @@
 	background-image: url(../images/mobile-nav.png);
 }
 
+#hero {
+	// because IE8 doesn't support background-size: contain;
+	background-image: url(../images/auditorium_blur_ie8.jpg);
+	.content {
+		// IE8 doesn't support rgba, so a png fallback
+		background-image: url(../images/ie8-fallback-transparent-black.png);
+	}
+}
+
+
 // Lower res heading for IE8
 #heading h1 a {
 	font-size: 40px;
@@ -18,4 +28,15 @@
 	&:after {
 	  content: ""!important;
 	}
+}
+
+// IE8 doesn't support calc
+#location-info {
+	left: 50%;
+	margin-left: 100px!important;
+}
+
+// Make platinum sponsors take up 30% of space
+#sponsors .sponsor-platinum li {
+	width: 30%!important;
 }
