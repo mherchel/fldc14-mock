@@ -31,7 +31,16 @@ $(document ).ready(function() {
 		$('#mobile-menu').toggleClass('mobile-menu-active');
 
 	});	
+ 	$('#primary-menu .expanded').click(function(){
 
+		// Add/remove the nav-click-active class
+		$(this).toggleClass('expanded-active');
+
+		// Toggle the nested ul
+		$('ul',this).slideToggle();
+
+                        
+    });
 
 
 });

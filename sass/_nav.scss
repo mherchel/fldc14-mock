@@ -88,12 +88,44 @@
     @include breakpoint(0 $tablet_wide) {
       line-height: 3;
       font-size: 25px;
+      position: relative;
       > ul {
         display: none;
+        background-color: #666;
+        padding: 0;
         > li {
-
+          line-height: 2;
+          > a {
+            background-color: transparent;
+            &:hover {
+              background-color: #999;
+            }
+          }
         }
       }
+      &:hover a {
+        background-color: transparent;
+        color: white;
+      }
+      &.expanded:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 30px;
+          top: 31px;
+          width: 0; 
+          height: 0; 
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 15px solid #999;
+      }
+      &.expanded-active:after {
+          top: 33px;
+          border-top: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 15px solid #999;
+      }      
     }
     // Submenu Structure for desktop
     @include breakpoint($tablet_wide) {
@@ -132,7 +164,7 @@
           &:hover {
             color: white!important;
           }
-        }  
+        }         
       // /ul     
       }
     // /tablet-wide breakpoint 

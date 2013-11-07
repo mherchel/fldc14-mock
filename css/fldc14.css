@@ -870,9 +870,44 @@ input[type="submit"] {
   #primary-menu li {
     line-height: 3;
     font-size: 25px;
+    position: relative;
   }
   #primary-menu li > ul {
     display: none;
+    background-color: #666;
+    padding: 0;
+  }
+  #primary-menu li > ul > li {
+    line-height: 2;
+  }
+  #primary-menu li > ul > li > a {
+    background-color: transparent;
+  }
+  #primary-menu li > ul > li > a:hover {
+    background-color: #999;
+  }
+  #primary-menu li:hover a {
+    background-color: transparent;
+    color: white;
+  }
+  #primary-menu li.expanded:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 31px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #999;
+  }
+  #primary-menu li.expanded-active:after {
+    top: 33px;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #999;
   }
 }
 @media (min-width: 900px) {
