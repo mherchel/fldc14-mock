@@ -886,6 +886,12 @@ input[type="submit"] {
   #primary-menu li > ul > li > a:hover {
     background-color: #999;
   }
+  #primary-menu li.header-right a {
+    background-color: #666;
+  }
+  #primary-menu li.header-right a:hover {
+    background-color: #777;
+  }
   #primary-menu li:hover a {
     background-color: transparent;
     color: white;
@@ -901,13 +907,17 @@ input[type="submit"] {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 15px solid #999;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
   #primary-menu li.expanded-active:after {
-    top: 33px;
-    border-top: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 15px solid #999;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 @media (min-width: 900px) {

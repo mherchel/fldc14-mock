@@ -103,6 +103,12 @@
           }
         }
       }
+      &.header-right a {
+        background-color: #666;
+        &:hover {
+          background-color: #777;
+        }
+      }
       &:hover a {
         background-color: transparent;
         color: white;
@@ -118,13 +124,10 @@
           border-left: 10px solid transparent;
           border-right: 10px solid transparent;
           border-top: 15px solid #999;
+          @include transition(all .5s);
       }
       &.expanded-active:after {
-          top: 33px;
-          border-top: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-bottom: 15px solid #999;
+          @include transform(rotate(180deg));
       }      
     }
     // Submenu Structure for desktop
