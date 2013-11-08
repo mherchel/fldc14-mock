@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -405,7 +405,7 @@
   -moz-animation-timing-function: linear;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -492,7 +492,7 @@ li {
   font-size: 18px;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -587,7 +587,7 @@ input[type="submit"] {
   color: white;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -659,7 +659,7 @@ input[type="submit"] {
   }
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -763,7 +763,7 @@ input[type="submit"] {
   color: #fdc572;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -772,18 +772,20 @@ input[type="submit"] {
 /* =============================================================================
     Header Navigation
    ========================================================================== */
-.header-menu {
+#header-menu {
   display: none;
   font-family: "bebas_neueregular", "arial narrow", arial, sans-serif;
   text-transform: uppercase;
   line-height: 100px;
   clear: both;
+  width: 100%;
 }
 @media (min-width: 900px) {
-  .header-menu {
-    clear: none;
-    float: right;
+  #header-menu {
     display: block;
+    position: fixed;
+    top: 0;
+    z-index: 20;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
     -o-transition: all 0.1s;
@@ -796,18 +798,18 @@ input[type="submit"] {
    ========================================================================== */
 #primary-menu {
   margin: 0;
-  padding: 0;
   width: 100%;
-  text-align: left;
-  clear: both;
+  padding: 0;
+  font-size: 0;
 }
 .scrolldown #primary-menu {
   top: 60px;
 }
 @media (min-width: 900px) {
   #primary-menu {
-    float: left;
-    width: auto;
+    text-align: right;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
 #primary-menu a {
@@ -840,7 +842,7 @@ input[type="submit"] {
 }
 @media (min-width: 900px) {
   #primary-menu li {
-    float: left;
+    display: inline-block;
   }
   #primary-menu li.faq > a {
     padding-right: 20px !important;
@@ -990,7 +992,7 @@ input[type="submit"] {
   }
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
@@ -1496,7 +1498,7 @@ input[type="submit"] {
   background-color: transparent;
 }
 
-#login-links:after, .wrapper:after, #heading:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #hero .content:before, #logo-container:before, #location-info:before {
+#login-links:after, .wrapper:after, #heading:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #heading:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
   display: table;
   content: "";
   clear: both;
