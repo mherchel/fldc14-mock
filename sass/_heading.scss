@@ -4,30 +4,51 @@
     Heading Section
    ========================================================================== */
 
-#heading {
-  background-color: black;
-  @extend %clearfix;
-  z-index: 10;
-  position: relative;
-  top: 0;
-  width: 100%;
-  @include breakpoint($tablet_wide) {
-    height: 100px;
-    position: fixed;
-    @include box-shadow(0 0 5px rgba(255,255,255,.3));
-    @include transition(all .1s);
-    &.scrolldown {
-      height: 60px;
-      h1, nav {
-        line-height: 60px;
-      }    
-    }
-  }
-  h1 {
-    float: left;
-    line-height: 100px;
+
+  #site-title {
+    text-align: left;
+    line-height: 60px;
+    height: 60px; // So the logo will overflow the background
+    width: 100%;
     margin: 0;
+    top: 0;
+    background-color: black; // Necessary so bubbles go behind in mobile
+    z-index: 10; // Necessary so bubbles go behind in mobile
+    position: fixed; // Necessary so bubbles go behind in mobile
     @include transition(all .1s);
+    @include breakpoint($smartphone_wide) {
+      position: fixed;   
+    }
+    @include breakpoint($tablet_narrow) {
+      font-size: 45px;
+      background-color: rgba(0,0,0,0.9);
+    }
+    @include breakpoint($tablet_wide) {
+      width: auto;
+      display: inline-block;
+      line-height: 100px;
+      font-size: 42px;
+      background-color: black;
+      z-index: 20;
+      &.scroll-down {
+        line-height: 60px;
+        height: 60px;
+      }
+    }   
+    @include breakpoint(1000px) {
+      font-size: 48px;   
+      }    
+    @include breakpoint($normal) {
+      font-size: 55px;
+      margin: 0 auto;
+      max-width: 1100px;
+      left: 50%;
+      margin-left: -550px;
+    }
+    @include breakpoint($wide) {
+      max-width: 1700px;
+      margin-left: -850px;
+    }    
     a {
       display: block;
       text-indent: -9999px;
@@ -41,17 +62,14 @@
       padding: 0;
       position: relative;
       z-index: 10;
+      &:after {
+        content: "#FLDC14";
+        position: absolute;
+        left: 100%;
+        text-indent:0
+      }      
       @include transition(all, .2s);
-      @include breakpoint($smartphone_wide) {
-        &:after {
-          content: "#FLDC14";
-          position: absolute;
-          left: 100%;
-          text-indent:0
-        }
-      }
       @include breakpoint($tablet_narrow) {
-        font-size: 40px;
         margin: 0 0 0 10px;
         text-indent: 0;
         background-image: none;
@@ -61,17 +79,7 @@
         &:after {
           content: "";
         }
-      }
-      @include breakpoint($tablet_wide) {
-        font-size: 38px;
-      }      
-      @include breakpoint($normal) {
-        font-size: 45px;
-        margin: 0;
-      }
-      @include breakpoint($normal) {
-        font-size: 55px;
-      }      
+      }     
       &:hover {
         color: lighten($orange, 10%);
       }
@@ -81,7 +89,7 @@
  
 
   // /#heading
-}
+//}
 
 
 

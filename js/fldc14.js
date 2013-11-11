@@ -4,39 +4,36 @@ $(document ).ready(function() {
 
 	$(window).scroll(function(){
 
-		if($(window).scrollTop() >= $('#heading').outerHeight()) {
-			$( "#heading" ).addClass( "scrolldown" );
-			$( "#heading h1 a" ).addClass( "scrolldown" );
-			$( "#mobile-menu" ).addClass( "scrolldown" );
-			$( "#login-header" ).addClass( "scrolldown" );
+		if($(window).scrollTop() >= $('#site-title').outerHeight()) {
+			$( "#site-title" ).addClass( "scroll-down" );
+			$( "#header-menu" ).addClass( "scroll-down" );
 			
 		}
 
-		if($(window).scrollTop() < $('#heading').outerHeight()) {
-			$( "#heading" ).removeClass( "scrolldown" );
-			$( "#heading h1 a" ).removeClass( "scrolldown" );
-			$( "#mobile-menu" ).removeClass( "scrolldown" );
-			$( "#login-header" ).removeClass( "scrolldown" );
+		if($(window).scrollTop() < $('#site-title').outerHeight()) {
+			$( "#site-title" ).removeClass( "scroll-down" );
+			$( "#header-menu" ).removeClass( "scroll-down" );
 		}	
 	
 	});
 
-	// Mobile Navigation
-
+	// Show the mobile menu
 	$('#mobile-menu').click(function(){
 
-		$('.header-menu').stop();
-		$('.header-menu').slideToggle();
+		$('#header-menu').toggleClass('header-menu-active');
 		$('#mobile-menu').toggleClass('mobile-menu-active');
 
 	});	
 
+	// Expand sub-menus for mobile navigation
  	$('#primary-menu .expanded').click(function(){
 
 		$(this).toggleClass('expanded-active');
-		$('ul',this).slideToggle();
 
-                        
+		if( $(window).width() < 900 ) {
+			$('ul',this).slideToggle();
+		}
+                 
     });
 
 

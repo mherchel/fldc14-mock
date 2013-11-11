@@ -4,12 +4,12 @@
 /* =============================================================================
     Hero
    ========================================================================== */
-
 #hero {
   background-image: url(../images/auditorium_blur.jpg);
   background-size: cover;
   position: relative;
   padding-bottom: 20px;
+  margin-top: 60px;
   @include breakpoint($tablet_wide) {
     margin-top: 100px;
   }
@@ -47,9 +47,6 @@
     color: white;
     border-bottom: solid 1px white;
     -webkit-text-stroke: 1px white;
-    // background:  -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
     @include breakpoint($smartphone_wide) {
       font-size: 65px;
     }    
@@ -66,11 +63,14 @@
   h2 {
     font-size: 30px;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.2;
     color: $orange;
+    @include breakpoint($smartphone_wide) {
+      line-height: 1.5;
+    }    
     @include breakpoint($wide) {
       font-size: 40px;
-    } 
+    }
   }
   p {
     margin: 10px;
@@ -162,6 +162,7 @@
   @extend %clearfix;
   position: relative;
   display: none;
+  overflow: hidden; // Necessary to prevent some horiz scrolling in ipad portrait
   @include breakpoint($tablet_narrow) {
     display: block;
     width: 70%;
@@ -310,8 +311,8 @@
   }
   @include breakpoint($tablet_narrow) {
     max-width: 350px;
-    margin: 75px 20px;
-    left: calc(20% + 80px);
+    margin: 75px 0 75px 100px;
+    left: 20%;
       &:before {
       content: "";
       width: 0; 
@@ -326,7 +327,7 @@
     }  
   }
   @include breakpoint($tablet_wide) {
-    left: calc(50% + 80px);
+    left: 50%;
   }  
   h1 {
     color: $yellow;

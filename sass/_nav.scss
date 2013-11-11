@@ -5,29 +5,48 @@
     Header Navigation
    ========================================================================== */
 
-
-
 #header-menu {
-  display: none;
   font-family: $font-heading;
   text-transform: uppercase;
   line-height: 100px;
   clear: both;
-  width: 100%;
+  background-color: black;
+  @include breakpoint(0 $tablet_wide) {
+    width: 0;
+    overflow: scroll;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    z-index: 6;
+    @include transition(all 0.2s);
+    &.header-menu-active {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  @include breakpoint($smartphone_wide $tablet_narrow) {  
+    &.header-menu-active {
+      width: 80%;
+    }    
+  }
+  @include breakpoint($tablet_narrow $tablet_wide) {
+    &.header-menu-active {
+      width: 300px;
+    }    
+  }
   @include breakpoint($tablet_wide) {
-    display: block;
+    width: 100%;
     position: fixed;
     top: 0;
-    z-index: 20;
-    @include transition(all .1s);
+    height: 100px; // Necessary so that bubbles go behind in desktop view
+    z-index: 10;
+    @include transition(all .2s);
+    &.scroll-down {
+      line-height: 60px;
+      height: 60px;
+    }
   }
-  // @include breakpoint($normal) {
-  //   max-width: 1100px;
-  //   margin: 0 auto;
-  // }
-  // @include breakpoint($wide) {
-  //   max-width: 1500px;
-  // }  
 }
 
 
@@ -40,6 +59,7 @@
   width: 100%;
   padding: 0;
   font-size: 0; // Remove the spacing from in between blocks
+  height: 100px; // Necessary to remove some spacing
   @extend %clearfix;
   .scrolldown & {
     top: 60px;
@@ -48,16 +68,17 @@
     text-align: right;
     max-width: 1100px;
     margin: 0 auto;
+    height: 60px;
   }
   a {
     padding: 0 20px;
     color: white;
-    background-color: black;
     text-decoration: none;
     display: block;    
     @include transition(color .2s);
     @include transition(background-color .2s);
     @include breakpoint($tablet_wide) {
+      background-color: black; // Hide the transitioning dropdowns
       position: relative;   
       z-index: 10;
       padding: 0 10px;
@@ -192,13 +213,17 @@
    ========================================================================== */
 
 
-  #mobile-menu {
+#mobile-menu {
   text-indent: -9999px;
   overflow: hidden;
   width: 50px;
   height: 50px;
   float: right;
-  margin: 25px;
+  margin: 5px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
   cursor:pointer;
   background-image: url(../images/mobile-nav.svg);
   background-size: 30px;  
