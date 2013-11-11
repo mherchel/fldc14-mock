@@ -1003,7 +1003,7 @@ input[type="submit"] {
 @media (min-width: 900px) and (min-width: 1700px) {
   #primary-menu li > ul {
     top: -600px;
-    width: 220px;
+    width: 240px;
   }
 }
 

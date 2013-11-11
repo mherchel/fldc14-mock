@@ -180,7 +180,7 @@
         z-index: 5;
         @include breakpoint($wide) {
           top: -600px;
-          width: 220px;
+          width: 240px;
         }
         @include transition(all .2s); // Speed of the dropdown
         > li {
