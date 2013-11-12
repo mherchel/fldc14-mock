@@ -162,18 +162,19 @@
   @extend %clearfix;
   position: relative;
   display: none;
-  overflow: hidden; // Necessary to prevent some horiz scrolling in ipad portrait
   @include breakpoint($tablet_narrow) {
     display: block;
     width: 70%;
     margin: 0 auto;
     padding-right: 7%;
+    overflow: hidden; // Necessary to prevent some horiz scrolling in ipad portrait
   }
   @include breakpoint($tablet_wide) {
     float: left;
     width: 42%;
     margin: 80px 0 40px -50px;
     padding-right: 0;
+    overflow: visible;
   }
   @include breakpoint($normal) {
     width: 40%;

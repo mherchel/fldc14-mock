@@ -174,9 +174,6 @@
 // }
 
 
-#bubble-white {
-  display: none;
-}
 .cssanimations #images {
   background-image: url(../images/white-bubble.svg);
   background-repeat: no-repeat;
@@ -189,5 +186,22 @@
   -moz-animation-duration: 20s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;  
+
+}
+
+.cssanimations #header-menu {
+  @include breakpoint($tablet_narrow $tablet_wide) {
+    background-image: url(../images/white-bubble.svg);
+    background-repeat: no-repeat;
+    background-position: 110% 600px;
+    background-size: 600px;
+    -webkit-transform: translateZ(0);
+    -webkit-animation:bubblewhite 40s linear 0 infinite;
+    animation:bubblewhite 40s linear 0 infinite;  
+    -moz-animation-name: bubblewhite;  /* Firefox does not like shorthand */
+    -moz-animation-duration: 40s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;  
+  }
 
 }

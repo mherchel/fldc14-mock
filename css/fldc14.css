@@ -386,10 +386,6 @@
   }
 }
 
-#bubble-white {
-  display: none;
-}
-
 .cssanimations #images {
   background-image: url(../images/white-bubble.svg);
   background-repeat: no-repeat;
@@ -403,6 +399,23 @@
   -moz-animation-duration: 20s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .cssanimations #header-menu {
+    background-image: url(../images/white-bubble.svg);
+    background-repeat: no-repeat;
+    background-position: 110% 600px;
+    background-size: 600px;
+    -webkit-transform: translateZ(0);
+    -webkit-animation: bubblewhite 40s linear 0 infinite;
+    animation: bubblewhite 40s linear 0 infinite;
+    -moz-animation-name: bubblewhite;
+    /* Firefox does not like shorthand */
+    -moz-animation-duration: 40s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+  }
 }
 
 #login-links:after, .wrapper:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {
@@ -793,11 +806,15 @@ input[type="submit"] {
     top: 60px;
     left: 0;
     height: 100%;
+    padding-bottom: 60px;
     z-index: 6;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+  }
+  #header-menu::-webkit-scrollbar {
+    display: none;
   }
   #header-menu.header-menu-active {
     width: 100%;
@@ -840,7 +857,6 @@ input[type="submit"] {
   width: 100%;
   padding: 0;
   font-size: 0;
-  height: 100px;
 }
 .scrolldown #primary-menu {
   top: 60px;
@@ -1228,7 +1244,6 @@ input[type="submit"] {
 #logo-container {
   position: relative;
   display: none;
-  overflow: hidden;
 }
 @media (min-width: 700px) {
   #logo-container {
@@ -1236,6 +1251,7 @@ input[type="submit"] {
     width: 70%;
     margin: 0 auto;
     padding-right: 7%;
+    overflow: hidden;
   }
 }
 @media (min-width: 900px) {
@@ -1244,6 +1260,7 @@ input[type="submit"] {
     width: 42%;
     margin: 80px 0 40px -50px;
     padding-right: 0;
+    overflow: visible;
   }
 }
 @media (min-width: 1200px) {

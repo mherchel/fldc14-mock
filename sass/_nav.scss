@@ -18,8 +18,12 @@
     top: 60px;
     left: 0;
     height: 100%;
+    padding-bottom: 60px; // Same as 'top' value
     z-index: 6;
     @include transition(all 0.2s);
+    &::-webkit-scrollbar { // Hide the scrollbar in desktop browsers
+      display: none;
+    }
     &.header-menu-active {
       width: 100%;
       max-width: 400px;
@@ -59,7 +63,6 @@
   width: 100%;
   padding: 0;
   font-size: 0; // Remove the spacing from in between blocks
-  height: 100px; // Necessary to remove some spacing
   @extend %clearfix;
   .scrolldown & {
     top: 60px;
