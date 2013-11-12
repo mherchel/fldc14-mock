@@ -41,6 +41,9 @@
 
 #main {
   margin-top: 60px;
+  @include breakpoint($tablet_wide) {
+    margin-top: 100px;
+  }
   .wrapper {
     text-align: left;
   }
