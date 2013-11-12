@@ -1,8 +1,9 @@
 $(document ).ready(function() {
 
-	// Resize the header on scroll
 
 	$(window).scroll(function(){
+
+		// Resize the header on scroll
 
 		if($(window).scrollTop() >= $('#site-title').outerHeight()) {
 			$( "#site-title" ).addClass( "scroll-down" );
@@ -14,6 +15,16 @@ $(document ).ready(function() {
 			$( "#site-title" ).removeClass( "scroll-down" );
 			$( "#header-menu" ).removeClass( "scroll-down" );
 		}	
+
+		// Slide in the location box on front page
+
+		if($(window).scrollTop() >= $('#location-info').outerHeight()) {
+			$( "#location-info" ).addClass( "scroll-down" );
+		}	
+
+		if($(window).scrollTop() < $('#location-info').outerHeight()) {
+			$( "#location-info" ).removeClass( "scroll-down" );
+		}				
 	
 	});
 

@@ -258,6 +258,7 @@
 #location {
   background-position: center center;
   position: relative;
+  overflow: hidden; // No scrollbars when #location-info is outside window
   @include breakpoint(0px $smartphone_wide) {
     background-image: url(../images/map-background_smartphone_narrow.jpg);
   }  
@@ -330,6 +331,15 @@
   @include breakpoint($tablet_wide) {
     left: 50%;
   }  
+  @include breakpoint($normal) {
+    .csstransitions & {
+      left: 130%;
+      @include transition(left .5s .2s); // duration .5s, delay .2s
+      &.scroll-down {
+        left: 50%;
+      }
+    }
+  }
   h1 {
     color: $yellow;
     margin: 0;

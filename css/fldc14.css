@@ -1334,6 +1334,7 @@ input[type="submit"] {
 #location {
   background-position: center center;
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 0px) and (max-width: 470px) {
   #location {
@@ -1421,6 +1422,19 @@ input[type="submit"] {
 }
 @media (min-width: 900px) {
   #location-info {
+    left: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .csstransitions #location-info {
+    left: 130%;
+    -webkit-transition: left 0.5s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition: left 0.5s 0.2s;
+    -o-transition: left 0.5s 0.2s;
+    transition: left 0.5s 0.2s;
+  }
+  .csstransitions #location-info.scroll-down {
     left: 50%;
   }
 }
