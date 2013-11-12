@@ -46,8 +46,9 @@
       margin-left: -550px;
     }
     @include breakpoint($wide) {
-      max-width: 1700px;
-      margin-left: -850px;
+      font-size: 65px;
+      max-width: 1500px;
+      margin-left: -750px;
     }    
     a {
       display: block;

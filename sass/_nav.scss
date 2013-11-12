@@ -73,6 +73,9 @@
     margin: 0 auto;
     height: 60px;
   }
+  @include breakpoint($wide) {
+    max-width: 1500px;
+  }
   a {
     padding: 0 20px;
     color: white;
