@@ -48,4 +48,15 @@ $(document ).ready(function() {
     });
 
 
+    // IE does not handle the aspect ratios of scaling SVGs, so this fixes it
+	if ($.browser.msie && $.browser.version >= 9) {
+	    var img = document.getElementById('main-img'); 
+		var width = img.clientWidth;
+		var height = width * 0.906;  // the ratio of width to height of the drupal diver svg
+		if(width >height) {
+		    $(img).css("height", height);
+		}
+	}
+
+
 });
