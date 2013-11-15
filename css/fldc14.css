@@ -1208,6 +1208,11 @@ input[type="submit"] {
     content: " | ";
   }
 }
+@media (min-width: 1700px) {
+  #hero .date {
+    font-size: inherit;
+  }
+}
 #hero .loc {
   display: block;
 }

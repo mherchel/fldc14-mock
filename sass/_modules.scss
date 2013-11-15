@@ -111,6 +111,9 @@
         content: " | "
       }
     }
+    @include breakpoint($wide) {
+      font-size: inherit;
+    }
   }
   .loc {
     display: block;
