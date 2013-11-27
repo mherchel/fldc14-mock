@@ -1,4 +1,12 @@
 $(document ).ready(function() {
+  // Necessary because IE10 and 11 do not support conditionals.
+  if ($.browser.msie && $.browser.version == 10) {
+    $("html").addClass("ie10");
+  }
+
+  if ($.browser.msie && $.browser.version == 11) {
+    $("html").addClass("ie11");
+  }  	
 
 
 	$(window).scroll(function(){
@@ -63,6 +71,8 @@ $(document ).ready(function() {
 	$(window).resize(function() { 
 		svgheight();
 	});
+
+
 
 });
 

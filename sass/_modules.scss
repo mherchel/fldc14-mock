@@ -430,9 +430,9 @@
       max-width: 90%;
       max-height: 100%;
       margin: 0 auto; // Necessary so logo images will horiz center within div
-    }
-    &:hover a,
-    &:focus a {
+    } 
+    .csstransforms3d &:hover a, // Only show transforms to browsers can support them
+    .csstransforms3d &:focus a {
        @include transform(rotateY(180deg)); 
        @include backface-visibility(hidden); // ie  
     }    
@@ -459,18 +459,28 @@
   
   }
   .wrap-front { // Necessary so logo images will vert center within div
-    display: flex; 
-    align-items: center; 
-    -webkit-display: flex; 
-    -moz-align-items: center;    
-    -webkit-display: flex; 
-    -moz-align-items: center;   
+    display: block;
+    .flexbox & {
+      display: flex; 
+      align-items: center; 
+      -webkit-display: flex; 
+      -moz-align-items: center;    
+      -webkit-display: flex; 
+      -moz-align-items: center;
+    }   
+   .csstransforms3d & { 
+      border: solid 1px white; // prevent jumping.
+    }          
   }
   .wrap-back {
-    @include transform(rotateY(180deg));
+    display: none; // Hide from old browsers
     background-color: #f5f5f5;
     border: solid 1px #ddd;
-    border-radius: 3px;
+    border-radius: 3px;      
+    .csstransforms3d & { 
+      @include transform(rotateY(180deg));
+      display: block;
+    }      
   }
 
 
