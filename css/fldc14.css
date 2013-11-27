@@ -1540,12 +1540,77 @@ input[type="submit"] {
   padding: 0;
   list-style: none;
   display: inline-block;
-  text-align: center;
-  min-width: 100px;
   position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
 }
 #sponsors li img {
   max-width: 90%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+#sponsors li:hover a, #sponsors li:focus a {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#sponsors a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+#sponsors .wrap-front,
+#sponsors .wrap-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#sponsors .wrap-front {
+  display: flex;
+  align-items: center;
+  -webkit-display: flex;
+  -moz-align-items: center;
+  -webkit-display: flex;
+  -moz-align-items: center;
+}
+#sponsors .wrap-back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: #f5f5f5;
+  border: solid 1px #ddd;
+  border-radius: 3px;
 }
 #sponsors .sponsor-platinum li {
   width: 80%;
@@ -1566,6 +1631,7 @@ input[type="submit"] {
 }
 #sponsors .sponsor-gold li {
   width: 40%;
+  max-height: 250px;
 }
 @media (min-width: 470px) {
   #sponsors .sponsor-gold li {
@@ -1577,8 +1643,12 @@ input[type="submit"] {
     width: 23%;
   }
 }
-#sponsors .sponsor-silver li,
+#sponsors .sponsor-silver li {
+  max-height: 200px;
+  width: 16%;
+}
 #sponsors .sponsor-bronze li {
+  max-height: 100px;
   width: 12%;
 }
 #sponsors .sponsor-platinum {
@@ -1592,9 +1662,6 @@ input[type="submit"] {
 }
 #sponsors .sponsor-bronze {
   color: #998100;
-}
-#sponsors a {
-  background-color: transparent;
 }
 
 #login-links:after, .wrapper:after, #primary-menu:after, #hero .content:after, #logo-container:after, #location-info:after, #login-links:before, .wrapper:before, #primary-menu:before, #hero .content:before, #logo-container:before, #location-info:before {

@@ -422,25 +422,62 @@
     padding: 0;
     list-style: none;
     display: inline-block;
-    text-align: center;
-    min-width: 100px;
     position: relative;
+    width: 300px; // necessary to preserve smooth hovers
+    height: 300px; // necessary to preserve smooth hovers
+    @include perspective(1000);
     img {
       max-width: 90%;
+      max-height: 100%;
+      margin: 0 auto; // Necessary so logo images will horiz center within div
     }
-    // &:hover:after {
-    //   content: "@todo - put in a cool hover effect";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   text-align: center;
-    //   width: 100%;
-    //   background-color: $turquois;
-    //   color: white;
-    //   font-weight: bold;
-    // }
+    &:hover a,
+    &:focus a {
+       @include transform(rotateY(180deg)); 
+       @include backface-visibility(hidden); // ie  
+    }    
   }
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    @include transform-style(preserve-3d);
+    @include transition(1s);
+  }
+
+  .wrap-front,
+  .wrap-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    @include backface-visibility(hidden);
+
+  
+  }
+  .wrap-front { // Necessary so logo images will vert center within div
+    display: flex; 
+    align-items: center; 
+    -webkit-display: flex; 
+    -moz-align-items: center;    
+    -webkit-display: flex; 
+    -moz-align-items: center;   
+  }
+  .wrap-back {
+    @include transform(rotateY(180deg));
+    background-color: #f5f5f5;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+  }
+
+
+
+
+
+
   .sponsor-platinum li {
     width: 80%;
     @include breakpoint($smartphone_wide) {
@@ -462,6 +499,7 @@
 
   .sponsor-gold li {
     width: 40%;
+    max-height: 250px;
     @include breakpoint($smartphone_wide) {
       width: 30%;
     }
@@ -470,10 +508,16 @@
     }  
   }
 
-  .sponsor-silver li,
-  .sponsor-bronze li,{
-    width: 12%;    
+  .sponsor-silver li {
+    max-height: 200px;
+    width: 16%;    
   }
+
+
+  .sponsor-bronze li {
+    max-height: 100px;
+    width: 12%;    
+  }  
 
   .sponsor-platinum {
     color: #666;
@@ -487,8 +531,6 @@
   .sponsor-bronze {
     color: darken(gold, 20%);
   }
-  a {
-    background-color: transparent;
-  }
+
   // /#Sponsors
 }
