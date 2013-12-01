@@ -292,7 +292,6 @@
     border-top: 40px solid $turquois;
   }
 }
-
 #map-link {
   position: absolute;
   text-indent: -9999px;
@@ -301,7 +300,6 @@
   height: 100%;
   z-index: 1;
 }
-
 #location-info {
   margin: 50px auto;
   padding: 20px 30px;
@@ -430,14 +428,22 @@
       max-width: 90%;
       max-height: 100%;
       margin: 0 auto; // Necessary so logo images will horiz center within div
-    } 
+    }       
     .csstransforms3d &:hover a, // Only show transforms to browsers can support them
     .csstransforms3d &:focus a {
        @include transform(rotateY(180deg)); 
+       //@include backface-visibility(hidden); // ie  
+    }
+    // For the life of me, i cannot get this to work in IE. 
+    //    So for now, using graceful degredation
+    .no-csstransforms3d &:hover a, 
+    .no-csstransforms3d &:focus a,  
+    .ie10 &:hover a, 
+    .ie10 &:focus a {
+       @include transform(rotateY(0deg)); 
        @include backface-visibility(hidden); // ie  
-    }    
+    }       
   }
-
   a {
     display: block;
     height: 100%;
@@ -445,7 +451,6 @@
     @include transform-style(preserve-3d);
     @include transition(1s);
   }
-
   .wrap-front,
   .wrap-back {
     position: absolute;
@@ -455,10 +460,9 @@
     height: 100%;
     padding: 10px;
     @include backface-visibility(hidden);
-
-  
   }
-  .wrap-front { // Necessary so logo images will vert center within div
+  .wrap-front,
+  .wrap-back { // Necessary so logo images will vert center within div
     display: block;
     .flexbox & {
       display: flex; 
@@ -480,13 +484,17 @@
     .csstransforms3d & { 
       @include transform(rotateY(180deg));
       display: block;
-    }      
+    } 
+    .wrap:hover & {
+       @include transform(rotateY(180deg));
+    }             
+  }
+  h3 {
+    line-height: 1; // Necessary for FF
   }
 
 
-
-
-
+  // Colors and width styling for different sponsorship levels
 
   .sponsor-platinum li {
     width: 80%;
@@ -506,7 +514,6 @@
       }   
     }   
   }
-
   .sponsor-gold li {
     width: 40%;
     max-height: 250px;
@@ -517,18 +524,14 @@
       width: 23%;
     }  
   }
-
   .sponsor-silver li {
     max-height: 200px;
     width: 16%;    
   }
-
-
   .sponsor-bronze li {
     max-height: 100px;
     width: 12%;    
   }  
-
   .sponsor-platinum {
     color: #666;
   }

@@ -810,7 +810,7 @@ input[type="submit"] {
     overflow: scroll;
     position: fixed;
     top: 60px;
-    left: 0;
+    right: 0;
     height: 100%;
     padding-bottom: 60px;
     z-index: 6;
@@ -1560,6 +1560,13 @@ input[type="submit"] {
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+.no-csstransforms3d #sponsors li:hover a, .no-csstransforms3d #sponsors li:focus a, .ie10 #sponsors li:hover a, .ie10 #sponsors li:focus a {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -1594,10 +1601,12 @@ input[type="submit"] {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-#sponsors .wrap-front {
+#sponsors .wrap-front,
+#sponsors .wrap-back {
   display: block;
 }
-.flexbox #sponsors .wrap-front {
+.flexbox #sponsors .wrap-front, .flexbox
+#sponsors .wrap-back {
   display: flex;
   align-items: center;
   -webkit-display: flex;
@@ -1605,7 +1614,8 @@ input[type="submit"] {
   -webkit-display: flex;
   -moz-align-items: center;
 }
-.csstransforms3d #sponsors .wrap-front {
+.csstransforms3d #sponsors .wrap-front, .csstransforms3d
+#sponsors .wrap-back {
   border: solid 1px white;
 }
 #sponsors .wrap-back {
@@ -1621,6 +1631,16 @@ input[type="submit"] {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
   display: block;
+}
+.wrap:hover #sponsors .wrap-back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+#sponsors h3 {
+  line-height: 1;
 }
 #sponsors .sponsor-platinum li {
   width: 80%;
