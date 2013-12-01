@@ -1,13 +1,13 @@
 $(document ).ready(function() {
-  // Necessary because IE10 and 11 do not support conditionals.
-  if ($.browser.msie && $.browser.version == 10) {
-    $("html").addClass("ie10");
-  }
 
-  if ($.browser.msie && $.browser.version == 11) {
-    $("html").addClass("ie11");
-  }  	
+	// Necessary because IE10 and 11 do not support conditionals.
+	if ($.browser.msie && $.browser.version == 10) {
+	$("html").addClass("ie10");
+	}
 
+	if ($.browser.msie && $.browser.version == 11) {
+	$("html").addClass("ie11");
+	}  	
 
 	$(window).scroll(function(){
 
@@ -56,23 +56,14 @@ $(document ).ready(function() {
     });
 
 	// IE does not handle the aspect ratios of scaling SVGs, so this fixes it
- 	function svgheight() {
-		if ($.browser.msie && $.browser.version >= 9) {
-			
-		    var img = document.getElementById('main-img'); 
-			var width = img.clientWidth;
-			var height = width * 0.906;  // the ratio of width to height of the drupal diver svg
-			img.css("height", height);
+	if ($.browser.msie && $.browser.version >= 9) {
+		
+	    var img = document.getElementById('main-img'); 
+		var width = img.clientWidth;
+		var height = width * 0.906;  // the ratio of width to height of the drupal diver svg
+		$("#main-img").css("height", height);
 
-		}
 	}
-	svgheight();
-    
-	$(window).resize(function() { 
-		svgheight();
-	});
-
-
 
 });
 
