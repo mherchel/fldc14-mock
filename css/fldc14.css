@@ -1462,7 +1462,7 @@ input[type="submit"] {
   color: white;
   margin: 0;
   text-align: left;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 1.5;
 }
 #location-info h3 {
@@ -1535,109 +1535,126 @@ input[type="submit"] {
   padding: 0;
   margin: 0 0 40px 0;
 }
-#sponsors li {
-  margin: 0;
+#sponsors .wrap {
+  margin: 20px 0;
   padding: 0;
   list-style: none;
   display: inline-block;
   position: relative;
-  width: 300px;
-  height: 300px;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -ms-perspective: 1000;
-  -o-perspective: 1000;
-  perspective: 1000;
 }
-#sponsors li img {
+#sponsors .wrap img {
   max-width: 90%;
   max-height: 100%;
   margin: 0 auto;
 }
-.csstransforms3d #sponsors li:hover a, .csstransforms3d #sponsors li:focus a {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.no-csstransforms3d #sponsors li:hover a, .no-csstransforms3d #sponsors li:focus a, .ie10 #sponsors li:hover a, .ie10 #sponsors li:focus a {
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
+@media (min-width: 1200px) {
+  #sponsors .wrap {
+    margin: 0;
+    width: 300px;
+    height: 300px;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+  }
+  .csstransforms3d #sponsors .wrap:hover a, .csstransforms3d #sponsors .wrap:focus a {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .no-csstransforms3d #sponsors .wrap:hover a, .no-csstransforms3d #sponsors .wrap:focus a, .ie10 #sponsors .wrap:hover a, .ie10 #sponsors .wrap:focus a {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 }
 #sponsors a {
   display: block;
   height: 100%;
   width: 100%;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
 }
-#sponsors .wrap-front,
-#sponsors .wrap-back {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
+@media (min-width: 1200px) {
+  #sponsors a {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+  }
+}
+@media (min-width: 1200px) {
+  #sponsors .wrap-front,
+  #sponsors .wrap-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 }
 #sponsors .wrap-front,
 #sponsors .wrap-back {
   display: block;
 }
-.flexbox #sponsors .wrap-front, .flexbox
-#sponsors .wrap-back {
-  display: flex;
-  align-items: center;
-  -webkit-display: flex;
-  -moz-align-items: center;
-  -webkit-display: flex;
-  -moz-align-items: center;
-}
-.csstransforms3d #sponsors .wrap-front, .csstransforms3d
-#sponsors .wrap-back {
-  border: solid 1px white;
+@media (min-width: 1200px) {
+  .flexbox #sponsors .wrap-front, .flexbox
+  #sponsors .wrap-back {
+    display: flex;
+    align-items: center;
+    -webkit-display: flex;
+    -moz-align-items: center;
+    -webkit-display: flex;
+    -moz-align-items: center;
+  }
+  .csstransforms3d #sponsors .wrap-front, .csstransforms3d
+  #sponsors .wrap-back {
+    border: solid 1px white;
+  }
 }
 #sponsors .wrap-back {
   display: none;
-  background-color: #f5f5f5;
-  border: solid 1px #ddd;
-  border-radius: 3px;
 }
-.csstransforms3d #sponsors .wrap-back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  display: block;
-}
-.wrap:hover #sponsors .wrap-back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+@media (min-width: 1200px) {
+  #sponsors .wrap-back {
+    background-color: #f5f5f5;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+  }
+  .csstransforms3d #sponsors .wrap-back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    display: block;
+  }
+  .wrap:hover #sponsors .wrap-back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
 }
 #sponsors h3 {
   line-height: 1;
@@ -1662,6 +1679,7 @@ input[type="submit"] {
 #sponsors .sponsor-gold li {
   width: 40%;
   max-height: 250px;
+  min-width: 100px;
 }
 @media (min-width: 470px) {
   #sponsors .sponsor-gold li {
@@ -1676,10 +1694,12 @@ input[type="submit"] {
 #sponsors .sponsor-silver li {
   max-height: 200px;
   width: 16%;
+  min-width: 100px;
 }
 #sponsors .sponsor-bronze li {
   max-height: 100px;
   width: 12%;
+  min-width: 100px;
 }
 #sponsors .sponsor-platinum {
   color: #666;

@@ -349,7 +349,7 @@
     color: white;
     margin: 0;
     text-align: left;
-    font-size: 35px;   
+    font-size: 30px;   
     line-height: 1.5; 
   }
   h3 {
@@ -415,79 +415,90 @@
     padding: 0;
     margin: 0 0 40px 0;
   }
-  li {
-    margin: 0;
+  .wrap {
+    margin: 20px 0;
     padding: 0;
     list-style: none;
     display: inline-block;
     position: relative;
-    width: 300px; // necessary to preserve smooth hovers
-    height: 300px; // necessary to preserve smooth hovers
-    @include perspective(1000);
     img {
       max-width: 90%;
       max-height: 100%;
       margin: 0 auto; // Necessary so logo images will horiz center within div
     }       
-    .csstransforms3d &:hover a, // Only show transforms to browsers can support them
-    .csstransforms3d &:focus a {
-       @include transform(rotateY(180deg)); 
-       //@include backface-visibility(hidden); // ie  
+    @include breakpoint($normal) {
+      margin: 0;
+      width: 300px; // necessary to preserve smooth hovers
+      height: 300px; // necessary to preserve smooth hovers  
+      @include perspective(1000);    
+      .csstransforms3d &:hover a, // Only show transforms to browsers can support them
+      .csstransforms3d &:focus a {
+         @include transform(rotateY(180deg)); 
+         //@include backface-visibility(hidden); // ie  
+      }
+      // For the life of me, i cannot get this to work in IE. 
+      //    So for now, using graceful degredation
+      .no-csstransforms3d &:hover a, 
+      .no-csstransforms3d &:focus a,  
+      .ie10 &:hover a, 
+      .ie10 &:focus a {
+         @include transform(rotateY(0deg)); 
+         @include backface-visibility(hidden); // ie  
+      }         
     }
-    // For the life of me, i cannot get this to work in IE. 
-    //    So for now, using graceful degredation
-    .no-csstransforms3d &:hover a, 
-    .no-csstransforms3d &:focus a,  
-    .ie10 &:hover a, 
-    .ie10 &:focus a {
-       @include transform(rotateY(0deg)); 
-       @include backface-visibility(hidden); // ie  
-    }       
   }
   a {
     display: block;
     height: 100%;
     width: 100%;
-    @include transform-style(preserve-3d);
-    @include transition(1s);
+    @include breakpoint($normal) {
+      @include transform-style(preserve-3d);
+      @include transition(1s);
+    }
   }
   .wrap-front,
   .wrap-back {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    @include backface-visibility(hidden);
+    @include breakpoint($normal) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      @include backface-visibility(hidden);
+    }
   }
   .wrap-front,
   .wrap-back { // Necessary so logo images will vert center within div
     display: block;
-    .flexbox & {
-      display: flex; 
-      align-items: center; 
-      -webkit-display: flex; 
-      -moz-align-items: center;    
-      -webkit-display: flex; 
-      -moz-align-items: center;
-    }   
-   .csstransforms3d & { 
-      border: solid 1px white; // prevent jumping.
-    }          
+    @include breakpoint($normal) {
+      .flexbox & {
+        display: flex; 
+        align-items: center; 
+        -webkit-display: flex; 
+        -moz-align-items: center;    
+        -webkit-display: flex; 
+        -moz-align-items: center;
+      }   
+     .csstransforms3d & { 
+        border: solid 1px white; // prevent jumping.
+      }   
+    }       
   }
   .wrap-back {
     display: none; // Hide from old browsers
-    background-color: #f5f5f5;
-    border: solid 1px #ddd;
-    border-radius: 3px;      
-    .csstransforms3d & { 
-      @include transform(rotateY(180deg));
-      display: block;
-    } 
-    .wrap:hover & {
-       @include transform(rotateY(180deg));
-    }             
+    @include breakpoint($normal) {
+      background-color: #f5f5f5;
+      border: solid 1px #ddd;
+      border-radius: 3px;      
+      .csstransforms3d & { 
+        @include transform(rotateY(180deg));
+        display: block;
+      } 
+      .wrap:hover & {
+         @include transform(rotateY(180deg));
+      }     
+    }        
   }
   h3 {
     line-height: 1; // Necessary for FF
@@ -517,6 +528,7 @@
   .sponsor-gold li {
     width: 40%;
     max-height: 250px;
+    min-width: 100px; 
     @include breakpoint($smartphone_wide) {
       width: 30%;
     }
@@ -526,11 +538,13 @@
   }
   .sponsor-silver li {
     max-height: 200px;
-    width: 16%;    
+    width: 16%;   
+    min-width: 100px;  
   }
   .sponsor-bronze li {
     max-height: 100px;
-    width: 12%;    
+    width: 12%; 
+    min-width: 100px;   
   }  
   .sponsor-platinum {
     color: #666;
