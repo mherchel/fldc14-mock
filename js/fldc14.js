@@ -16,12 +16,13 @@ $(document ).ready(function() {
 		if($(window).scrollTop() >= $('#site-title').outerHeight()) {
 			$( "#site-title" ).addClass( "scroll-down" );
 			$( "#header-menu" ).addClass( "scroll-down" );
-			
+			$( "#hero" ).addClass( "scroll-down" );
 		}
 
 		if($(window).scrollTop() < $('#site-title').outerHeight()) {
 			$( "#site-title" ).removeClass( "scroll-down" );
 			$( "#header-menu" ).removeClass( "scroll-down" );
+			$( "#hero" ).removeClass( "scroll-down" );
 		}	
 
 		// Slide in the location box on front page

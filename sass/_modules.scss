@@ -12,6 +12,10 @@
   margin-top: 60px;
   @include breakpoint($tablet_wide) {
     margin-top: 100px;
+    @include transition(margin-top .2s);
+    &.scroll-down {
+      margin-top: 60px;
+    }
   }
   @include breakpoint($normal) {
     background-attachment: fixed; // Because why the hell not?

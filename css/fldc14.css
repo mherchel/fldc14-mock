@@ -696,10 +696,6 @@ input[type="submit"] {
   background-color: black;
   z-index: 10;
   position: fixed;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
 }
 @media (min-width: 470px) {
   #site-title {
@@ -720,10 +716,18 @@ input[type="submit"] {
     font-size: 42px;
     background-color: black;
     z-index: 20;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
   }
   #site-title.scroll-down {
     line-height: 60px;
     height: 60px;
+    -webkit-transition: all -0.2s;
+    -moz-transition: all -0.2s;
+    -o-transition: all -0.2s;
+    transition: all -0.2s;
   }
 }
 @media (min-width: 1000px) {
@@ -1083,6 +1087,13 @@ input[type="submit"] {
 @media (min-width: 900px) {
   #hero {
     margin-top: 100px;
+    -webkit-transition: margin-top 0.2s;
+    -moz-transition: margin-top 0.2s;
+    -o-transition: margin-top 0.2s;
+    transition: margin-top 0.2s;
+  }
+  #hero.scroll-down {
+    margin-top: 60px;
   }
 }
 @media (min-width: 1200px) {

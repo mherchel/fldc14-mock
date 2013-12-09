@@ -15,7 +15,6 @@
     background-color: black; // Necessary so bubbles go behind in mobile
     z-index: 10; // Necessary so bubbles go behind in mobile
     position: fixed; // Necessary so bubbles go behind in mobile
-    @include transition(all .1s);
     @include breakpoint($smartphone_wide) {
       position: fixed;   
     }
@@ -30,9 +29,11 @@
       font-size: 42px;
       background-color: black;
       z-index: 20;
+      @include transition(all .2s);
       &.scroll-down {
         line-height: 60px;
         height: 60px;
+        @include transition(all -.2s);
       }
     }   
     @include breakpoint(1000px) {
