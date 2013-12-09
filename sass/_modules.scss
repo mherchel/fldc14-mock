@@ -237,18 +237,58 @@
 }
 
 /* =============================================================================
-    Turqoise
+    Speakers
    ========================================================================== */
 
 
-#images {
+#speakers {
   background-color: $turquois;
   min-height: 600px;
   position: relative;
   overflow: hidden;
   h1 {
-    margin-top: 50px;
+    margin: 50px 0;
     color: white;
+  }
+  .speaker {
+    text-align: center;
+    margin-bottom: 50px;
+    @include breakpoint($tablet_narrow) {
+      display: inline-block;
+      vertical-align: top;
+      width: 32%;
+    }
+    &:hover {
+      .speaker-image {
+        @include filter(contrast(150%));
+        border-color: #333;
+      }
+      .speaker-name {
+        color: #333;
+      }
+      .speaker-desc {
+        color: #333;
+      }
+    }
+  }
+  .speaker-image {
+    border: 5px solid $orange;
+    border-radius: 50%;
+    max-width: 90%;
+    @include transition(all .8s);
+  }
+  .speaker-name {
+    margin: 10px 0 0 0;
+    color: #fff;
+    font-size: 50px;
+    @include transition(color .8s);
+  }
+  .speaker-desc {
+    margin: 0;
+    color: #666;
+    font-size: 20px;
+    line-height: 1.5;
+    @include transition(color .8s);
   }
 }
 

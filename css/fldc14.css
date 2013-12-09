@@ -1331,17 +1331,68 @@ input[type="submit"] {
 }
 
 /* =============================================================================
-    Turqoise
+    Speakers
    ========================================================================== */
-#images {
+#speakers {
   background-color: #55c2c2;
   min-height: 600px;
   position: relative;
   overflow: hidden;
 }
-#images h1 {
-  margin-top: 50px;
+#speakers h1 {
+  margin: 50px 0;
   color: white;
+}
+#speakers .speaker {
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media (min-width: 700px) {
+  #speakers .speaker {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+  }
+}
+#speakers .speaker:hover .speaker-image {
+  -webkit-filter: contrast(150%);
+  -moz-filter: contrast(150%);
+  filter: contrast(150%);
+  border-color: #333;
+}
+#speakers .speaker:hover .speaker-name {
+  color: #333;
+}
+#speakers .speaker:hover .speaker-desc {
+  color: #333;
+}
+#speakers .speaker-image {
+  border: 5px solid #fcb040;
+  border-radius: 50%;
+  max-width: 90%;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+#speakers .speaker-name {
+  margin: 10px 0 0 0;
+  color: #fff;
+  font-size: 50px;
+  -webkit-transition: color 0.8s;
+  -moz-transition: color 0.8s;
+  -o-transition: color 0.8s;
+  transition: color 0.8s;
+}
+#speakers .speaker-desc {
+  margin: 0;
+  color: #666;
+  font-size: 20px;
+  line-height: 1.5;
+  -webkit-transition: color 0.8s;
+  -moz-transition: color 0.8s;
+  -o-transition: color 0.8s;
+  transition: color 0.8s;
 }
 
 /* =============================================================================
